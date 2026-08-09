@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&amp;display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #f7f3ee; }
+  body { -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  a { color: #14121f; text-decoration: none; }
+  a:hover { color: #c2412a; }
+  @keyframes drawIn { to { stroke-dashoffset: 0; } }
+  @keyframes inkUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+  @keyframes fadeUp { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce) { [data-marquee] { animation: none !important; } }
+</style>
+<script src="./image-slot.js"></script>
+<script src="./backdrop.js"></script>
+</helmet>
+
+<x-import component-from-global-scope="wda-backdrop" hint-size="100%,100%"></x-import>
+<div style="position: relative; z-index: 1; background: transparent; color: #14121f; font-family: Newsreader, Georgia, serif">
+
+  <header style="position: relative; z-index: 20">
+    <div style="max-width: 1420px; margin: 0 auto; padding: 8px 36px 6px; display: flex; align-items: flex-end; justify-content: space-between; gap: 32px">
+      <a href="#top" style="font-family: Archivo, sans-serif; font-weight: 700; font-size: 19px; letter-spacing: -0.02em; line-height: 1">Website DesignART</a>
+      <nav style="display: flex; gap: 26px; font-family: Archivo, sans-serif; font-weight: 500; font-size: 13px; letter-spacing: -0.005em">
+        <a href="#top" style="color: rgba(20,18,32,0.82)" style-hover="color:#c2412a">Home</a>
+        <div onMouseEnter="{{ openMenu }}" onMouseLeave="{{ closeMenu }}" style="position: relative">
+          <a href="#disciplines" style="color: rgba(20,18,32,0.82); display: inline-flex; align-items: center; gap: 6px" style-hover="color:#c2412a">Services<span style="font-size: 9px; opacity: 0.7">▼</span></a>
+          <div style="position: absolute; top: 100%; left: -18px; padding-top: 12px; width: 288px; opacity: {{ menuOpacity }}; visibility: {{ menuVis }}; transform: {{ menuShift }}; transition: opacity 180ms ease, transform 180ms ease, visibility 180ms">
+            <div style="background: rgba(250,248,244,0.97); border: 1px solid rgba(20,18,32,0.3); box-shadow: 0 18px 40px rgba(20,18,32,0.14)">
+            <a href="pillar-web-architecture.dc.html" style="display: block; padding: 13px 18px; border-bottom: 1px solid rgba(20,18,32,0.14); transition: background 140ms ease" style-hover="background:rgba(20,18,32,0.06)">
+              <div style="font-family: Archivo, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Web Architecture &amp; Build</div>
+              <div style="margin-top: 3px; font-family: Archivo, sans-serif; font-size: 11.5px; font-weight: 500; color: rgba(20,18,32,0.6)">New sites, WordPress builds</div>
+            </a>
+            <a href="pillar-custom-software.dc.html" style="display: block; padding: 13px 18px; border-bottom: 1px solid rgba(20,18,32,0.14); transition: background 140ms ease" style-hover="background:rgba(20,18,32,0.06)">
+              <div style="font-family: Archivo, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Custom Software &amp; Automation</div>
+              <div style="margin-top: 3px; font-family: Archivo, sans-serif; font-size: 11.5px; font-weight: 500; color: rgba(20,18,32,0.6)">Bespoke tools, workflows</div>
+            </a>
+            <a href="pillar-ecommerce.dc.html" style="display: block; padding: 13px 18px; border-bottom: 1px solid rgba(20,18,32,0.14); transition: background 140ms ease" style-hover="background:rgba(20,18,32,0.06)">
+              <div style="font-family: Archivo, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">E-Commerce Operations</div>
+              <div style="margin-top: 3px; font-family: Archivo, sans-serif; font-size: 11.5px; font-weight: 500; color: rgba(20,18,32,0.6)">Storefronts, catalogue, support</div>
+            </a>
+            <a href="pillar-growth.dc.html" style="display: block; padding: 13px 18px; border-bottom: 1px solid rgba(20,18,32,0.14); transition: background 140ms ease" style-hover="background:rgba(20,18,32,0.06)">
+              <div style="font-family: Archivo, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Growth &amp; Visibility</div>
+              <div style="margin-top: 3px; font-family: Archivo, sans-serif; font-size: 11.5px; font-weight: 500; color: rgba(20,18,32,0.6)">SEO, campaigns, social, copy</div>
+            </a>
+            <a href="pillar-brand.dc.html" style="display: block; padding: 13px 18px; border-bottom: 1px solid rgba(20,18,32,0.14); transition: background 140ms ease" style-hover="background:rgba(20,18,32,0.06)">
+              <div style="font-family: Archivo, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Brand &amp; Creative Assets</div>
+              <div style="margin-top: 3px; font-family: Archivo, sans-serif; font-size: 11.5px; font-weight: 500; color: rgba(20,18,32,0.6)">Identity, collateral, content</div>
+            </a>
+            <a href="pillar-hosting.dc.html" style="display: block; padding: 13px 18px; border-bottom: 1px solid rgba(20,18,32,0.14); transition: background 140ms ease" style-hover="background:rgba(20,18,32,0.06)">
+              <div style="font-family: Archivo, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Hosting &amp; Site Management</div>
+              <div style="margin-top: 3px; font-family: Archivo, sans-serif; font-size: 11.5px; font-weight: 500; color: rgba(20,18,32,0.6)">Domains, speed, security, uptime</div>
+            </a>
+              <a href="#disciplines" style="display: block; padding: 12px 18px; font-family: Archivo, sans-serif; font-size: 11.5px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: {{ accent }}" style-hover="background:rgba(20,18,32,0.06)">All 18 services →</a>
+            </div>
+          </div>
+        </div>
+        <a href="#process" style="color: rgba(20,18,32,0.82)" style-hover="color:#c2412a">Process</a>
+        <a href="about.dc.html" style="color: rgba(20,18,32,0.82)" style-hover="color:#c2412a">About</a>
+        <a href="contact.dc.html" style="color: rgba(20,18,32,0.82)" style-hover="color:#c2412a">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="top" data-screen-label="Hero" style="position: relative">
+    <div style="max-width: 1420px; margin: 0 auto; padding: 0 36px; display: grid; grid-template-columns: {{ heroCols }}; gap: 0; min-height: {{ heroMinH }}; align-items: center">
+      <div style="padding: 6px 0 20px 0; align-self: auto; display: flex; flex-direction: column; justify-content: center; padding-top: 0px; padding-bottom: 0px; width: 100%; height: 100%">
+        <h1 style="margin: 0; font-family: Archivo, sans-serif; font-weight: 700; font-size: clamp(36px, 5vw, 84px); line-height: 0.94; text-wrap: balance; letter-spacing: -0.035em; max-width: 100%; animation: inkUp 0.8s cubic-bezier(0.2,0.7,0.2,1) 0.1s both">A site is drawn before it's built.</h1>
+        <p style="margin: 24px 0 0; max-width: 58ch; font-size: 19px; line-height: 1.55; font-weight: 300; color: rgba(20,18,32,0.86); animation: inkUp 0.8s cubic-bezier(0.2,0.7,0.2,1) 0.24s both">We draw the plan first — pages, states and edge cases — then build it. Design, development, commerce, hosting and the upkeep after launch.</p>
+        <div style="margin-top: 28px; display: flex; align-items: center; gap: 22px; flex-wrap: wrap; animation: fadeUp 0.8s ease 0.4s both">
+          <a href="#contact" style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 14px; letter-spacing: -0.005em; color: #f5f3ee; background: #14121f; padding: 15px 26px; transition: background 180ms ease" style-hover="background:#c2412a">Send us the brief</a>
+          <a href="#disciplines" style="font-family: Archivo, sans-serif; font-weight: 500; font-size: 14px; border-bottom: 1px solid rgba(20,18,32,0.35); padding-bottom: 2px">See all eighteen services</a>
+        </div>
+        <div style="margin-top: 30px; padding-top: 18px; border-top: 1px solid rgba(20,18,32,0.25); display: flex; align-items: center; flex-wrap: wrap; gap: 10px 14px; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(20,18,32,0.72); animation: fadeUp 0.8s ease 0.55s both">
+          <span>Web Design</span><span style="color: {{ accent }}">·</span>
+          <span>WordPress</span><span style="color: {{ accent }}">·</span>
+          <span>Ecommerce</span><span style="color: {{ accent }}">·</span>
+          <span>Development</span><span style="color: {{ accent }}">·</span>
+          <span>UI/UX</span><span style="color: {{ accent }}">·</span>
+          <span>Hosting</span>
+        </div>
+      </div>
+
+      <div style="position: relative; padding: 6px 0 16px 0; display: flex; flex-direction: column; justify-content: center">
+        <div style="position: relative; width: {{ heroBleedW }}; max-width: {{ heroBleedW }}; margin-right: {{ heroBleedM }}; overflow: hidden; max-width: 100%; animation: fadeUp 1s ease 0.15s both">
+          <div style="display: flex; width: 400%; transform: translateX({{ heroShift }}); transition: transform 620ms cubic-bezier(0.4,0,0.15,1)">
+            <div style="width: 25%; flex: none">
+              <img src="assets/hero-tablet-crop.png" alt="A launched activewear storefront shown on a tablet" style="display: block; width: 100%; height: auto; max-height: {{ heroImgMax }}; object-fit: contain">
+            </div>
+            <div style="width: 25%; flex: none">
+              <img src="assets/hero-tablet-crop.png" alt="Project 02" style="display: block; width: 100%; height: auto; max-height: {{ heroImgMax }}; object-fit: contain">
+            </div>
+            <div style="width: 25%; flex: none">
+              <img src="assets/hero-tablet-crop.png" alt="Project 03" style="display: block; width: 100%; height: auto; max-height: {{ heroImgMax }}; object-fit: contain">
+            </div>
+            <div style="width: 25%; flex: none">
+              <img src="assets/hero-tablet-crop.png" alt="Project 04" style="display: block; width: 100%; height: auto; max-height: {{ heroImgMax }}; object-fit: contain">
+            </div>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 20px; width: {{ heroBleedW }}; margin-top: 4px; margin-right: {{ heroBleedM }}; padding: 0 2% 0 9%; animation: fadeUp 1s ease 0.35s both">
+          <div style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; color: {{ accent }}">{{ heroCaption }}</div>
+          <div style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; color: rgba(20,18,32,0.6)">{{ heroCounter }}</div>
+          <div style="display: flex; gap: 10px; margin-left: auto">
+            <button type="button" aria-label="Previous project" onClick="{{ heroPrev }}" style="width: 42px; height: 42px; border-radius: 50%; border: 1px solid rgba(20,18,32,0.58); background: transparent; color: #14121f; font-size: 17px; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 160ms ease, color 160ms ease, border-color 160ms ease" style-hover="background:#14121f;color:#f5f3ee;border-color:#14121f">←</button>
+            <button type="button" aria-label="Next project" onClick="{{ heroNext }}" style="width: 42px; height: 42px; border-radius: 50%; border: 1px solid rgba(20,18,32,0.58); background: transparent; color: #14121f; font-size: 17px; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 160ms ease, color 160ms ease, border-color 160ms ease" style-hover="background:#14121f;color:#f5f3ee;border-color:#14121f">→</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Marquee" aria-label="What we build" style="position: relative; border-bottom: 1px solid #14121f; background: rgba(255,255,255,0.42); overflow: hidden; padding: 18px 0">
+    <div data-marquee="" style="display: flex; align-items: center; gap: 30px; width: max-content; animation: marquee 34s linear infinite">
+            <span style="font-family: Archivo, sans-serif; font-size: clamp(20px, 2.2vw, 30px); font-weight: 600; letter-spacing: -0.025em; color: #14121f; flex: none">Website Design</span><span style="font-family: Archivo, sans-serif; font-size: 13px; color: {{ accent }}; flex: none">✦</span>
+            <span style="font-family: Archivo, sans-serif; font-size: clamp(20px, 2.2vw, 30px); font-weight: 400; letter-spacing: -0.025em; color: rgba(20,18,32,0.66); flex: none">Development</span><span style="font-family: Archivo, sans-serif; font-size: 13px; color: {{ accent }}; flex: none">✦</span>
+            <span style="font-family: Archivo, sans-serif; font-size: clamp(20px, 2.2vw, 30px); font-weight: 600; letter-spacing: -0.025em; color: #14121f; flex: none">E-Commerce</span><span style="font-family: Archivo, sans-serif; font-size: 13px; color: {{ accent }}; flex: none">✦</span>
+            <span style="font-family: Archivo, sans-serif; font-size: clamp(20px, 2.2vw, 30px); font-weight: 400; letter-spacing: -0.025em; color: rgba(20,18,32,0.66); flex: none">Web Portals</span><span style="font-family: Archivo, sans-serif; font-size: 13px; color: {{ accent }}; flex: none">✦</span>
+            <span style="font-family: Archivo, sans-serif; font-size: clamp(20px, 2.2vw, 30px); font-weight: 600; letter-spacing: -0.025em; color: #14121f; flex: none">WordPress</span><span style="font-family: Archivo, sans-serif; font-size: 13px; color: {{ accent }}; flex: none">✦</span>
+            <span style="font-family: Archivo, sans-serif; font-size: clamp(20px, 2.2vw, 30px); font-weight: 400; letter-spacing: -0.025em; color: rgba(20,18,32,0.66); flex: none">UI/UX</span><span style="font-family: Archivo, sans-serif; font-size: 13px; color: {{ accent }}; flex: none">✦</span>
+            <span style="font-family: Archivo, sans-serif; font-size: clamp(20px, 2.2vw, 30px); font-weight: 600; letter-spacing: -0.025em; color: #14121f; flex: none">Hosting</span><span style="font-family: Archivo, sans-serif; font-size: 13px; color: {{ accent }}; flex: none">✦</span>
+            <span style="font-family: Archivo, sans-serif; font-size: clamp(20px, 2.2vw, 30px); font-weight: 400; letter-spacing: -0.025em; color: rgba(20,18,32,0.66); flex: none">Business Email</span><span style="font-family: Archivo, sans-serif; font-size: 13px; color: {{ accent }}; flex: none">✦</span>
+            <span style="font-family: Archivo, sans-serif; font-size: clamp(20px, 2.2vw, 30px); font-weight: 600; letter-spacing: -0.025em; color: #14121f; flex: none">Maintenance</span><span style="font-family: Archivo, sans-serif; font-size: 13px; color: {{ accent }}; flex: none">✦</span>
+            <span style="font-family: Archivo, sans-serif; font-size: clamp(20px, 2.2vw, 30px); font-weight: 400; letter-spacing: -0.025em; color: rgba(20,18,32,0.66); flex: none">Custom Apps</span><span style="font-family: Archivo, sans-serif; font-size: 13px; color: {{ accent }}; flex: none">✦</span>
+            <span style="font-family: Archivo, sans-serif; font-size: clamp(20px, 2.2vw, 30px); font-weight: 600; letter-spacing: -0.025em; color: #14121f; flex: none">Website Design</span><span style="font-family: Archivo, sans-serif; font-size: 13px; color: {{ accent }}; flex: none">✦</span>
+            <span style="font-family: Archivo, sans-serif; font-size: clamp(20px, 2.2vw, 30px); font-weight: 400; letter-spacing: -0.025em; color: rgba(20,18,32,0.66); flex: none">Development</span><span style="font-family: Archivo, sans-serif; font-size: 13px; color: {{ accent }}; flex: none">✦</span>
+            <span style="font-family: Archivo, sans-serif; font-size: clamp(20px, 2.2vw, 30px); font-weight: 600; letter-spacing: -0.025em; color: #14121f; flex: none">E-Commerce</span><span style="font-family: Archivo, sans-serif; font-size: 13px; color: {{ accent }}; flex: none">✦</span>
+            <span style="font-family: Archivo, sans-serif; font-size: clamp(20px, 2.2vw, 30px); font-weight: 400; letter-spacing: -0.025em; color: rgba(20,18,32,0.66); flex: none">Web Portals</span><span style="font-family: Archivo, sans-serif; font-size: 13px; color: {{ accent }}; flex: none">✦</span>
+            <span style="font-family: Archivo, sans-serif; font-size: clamp(20px, 2.2vw, 30px); font-weight: 600; letter-spacing: -0.025em; color: #14121f; flex: none">WordPress</span><span style="font-family: Archivo, sans-serif; font-size: 13px; color: {{ accent }}; flex: none">✦</span>
+            <span style="font-family: Archivo, sans-serif; font-size: clamp(20px, 2.2vw, 30px); font-weight: 400; letter-spacing: -0.025em; color: rgba(20,18,32,0.66); flex: none">UI/UX</span><span style="font-family: Archivo, sans-serif; font-size: 13px; color: {{ accent }}; flex: none">✦</span>
+            <span style="font-family: Archivo, sans-serif; font-size: clamp(20px, 2.2vw, 30px); font-weight: 600; letter-spacing: -0.025em; color: #14121f; flex: none">Hosting</span><span style="font-family: Archivo, sans-serif; font-size: 13px; color: {{ accent }}; flex: none">✦</span>
+            <span style="font-family: Archivo, sans-serif; font-size: clamp(20px, 2.2vw, 30px); font-weight: 400; letter-spacing: -0.025em; color: rgba(20,18,32,0.66); flex: none">Business Email</span><span style="font-family: Archivo, sans-serif; font-size: 13px; color: {{ accent }}; flex: none">✦</span>
+            <span style="font-family: Archivo, sans-serif; font-size: clamp(20px, 2.2vw, 30px); font-weight: 600; letter-spacing: -0.025em; color: #14121f; flex: none">Maintenance</span><span style="font-family: Archivo, sans-serif; font-size: 13px; color: {{ accent }}; flex: none">✦</span>
+            <span style="font-family: Archivo, sans-serif; font-size: clamp(20px, 2.2vw, 30px); font-weight: 400; letter-spacing: -0.025em; color: rgba(20,18,32,0.66); flex: none">Custom Apps</span><span style="font-family: Archivo, sans-serif; font-size: 13px; color: {{ accent }}; flex: none">✦</span>
+    </div>
+  </section>
+
+  <section id="disciplines" data-screen-label="Disciplines" style="position: relative; border-bottom: 1px solid #14121f">
+    <div style="max-width: 1420px; margin: 0 auto; padding: 0 36px">
+      <div style="padding: 64px 0 34px; display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; flex-wrap: wrap">
+        <h2 style="margin: 0; font-family: Archivo, sans-serif; font-weight: 700; font-size: clamp(30px, 3.4vw, 50px); line-height: 1; letter-spacing: -0.03em; max-width: 18ch">Eighteen services, one drawing board.</h2>
+        <p style="margin: 0; max-width: 42ch; font-size: 18px; line-height: 1.55; font-weight: 300; color: rgba(20,18,32,0.84)">Take one service or hand us the whole stack. Every one of them starts on the same board.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: {{ pillarCols }}; gap: 1px; border: 1px solid rgba(20,18,32,0.3); margin-bottom: 34px">
+        <a href="pillar-web-architecture.dc.html" style="background: transparent; box-shadow: 0 0 0 0.5px rgba(20,18,32,0.28); padding: 18px 20px 20px; display: block; transition: background 160ms ease" style-hover="background:rgba(255,255,255,0.42)">
+          <div style="font-family: Archivo, sans-serif; font-size: 10.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: {{ accent }}">Group</div>
+          <div style="margin-top: 8px; font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.15">Web Architecture &amp; Build</div>
+        </a>
+        <a href="pillar-custom-software.dc.html" style="background: transparent; box-shadow: 0 0 0 0.5px rgba(20,18,32,0.28); padding: 18px 20px 20px; display: block; transition: background 160ms ease" style-hover="background:rgba(255,255,255,0.42)">
+          <div style="font-family: Archivo, sans-serif; font-size: 10.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: {{ accent }}">Group</div>
+          <div style="margin-top: 8px; font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.15">Custom Software &amp; Automation</div>
+        </a>
+        <a href="pillar-ecommerce.dc.html" style="background: transparent; box-shadow: 0 0 0 0.5px rgba(20,18,32,0.28); padding: 18px 20px 20px; display: block; transition: background 160ms ease" style-hover="background:rgba(255,255,255,0.42)">
+          <div style="font-family: Archivo, sans-serif; font-size: 10.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: {{ accent }}">Group</div>
+          <div style="margin-top: 8px; font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.15">E-Commerce Operations</div>
+        </a>
+        <a href="pillar-growth.dc.html" style="background: transparent; box-shadow: 0 0 0 0.5px rgba(20,18,32,0.28); padding: 18px 20px 20px; display: block; transition: background 160ms ease" style-hover="background:rgba(255,255,255,0.42)">
+          <div style="font-family: Archivo, sans-serif; font-size: 10.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: {{ accent }}">Group</div>
+          <div style="margin-top: 8px; font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.15">Growth &amp; Visibility</div>
+        </a>
+        <a href="pillar-brand.dc.html" style="background: transparent; box-shadow: 0 0 0 0.5px rgba(20,18,32,0.28); padding: 18px 20px 20px; display: block; transition: background 160ms ease" style-hover="background:rgba(255,255,255,0.42)">
+          <div style="font-family: Archivo, sans-serif; font-size: 10.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: {{ accent }}">Group</div>
+          <div style="margin-top: 8px; font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.15">Brand &amp; Creative Assets</div>
+        </a>
+        <a href="pillar-hosting.dc.html" style="background: transparent; box-shadow: 0 0 0 0.5px rgba(20,18,32,0.28); padding: 18px 20px 20px; display: block; transition: background 160ms ease" style-hover="background:rgba(255,255,255,0.42)">
+          <div style="font-family: Archivo, sans-serif; font-size: 10.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: {{ accent }}">Group</div>
+          <div style="margin-top: 8px; font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.15">Hosting &amp; Site Management</div>
+        </a>
+      </div>
+      <div style="display: grid; grid-template-columns: {{ cardCols }}; gap: 1px; background: transparent; border: 1px solid rgba(20,18,32,0.3); margin-bottom: 72px">
+            <div style="position: relative; background: transparent; box-shadow: 0 0 0 0.5px rgba(20,18,32,0.28); padding: 26px 24px 28px; display: flex; flex-direction: column; gap: 16px; transition: background 160ms ease" style-hover="background:rgba(255,255,255,0.42)">
+              <a href="website-design-development.dc.html" aria-label="Open service page" style="position: absolute; inset: 0; z-index: 1; display: block"></a>
+              <div style="margin: -26px -24px 0; aspect-ratio: 3 / 2; overflow: hidden; border-bottom: 1px solid rgba(20,18,32,0.18)">
+                <img src="assets/service-01.webp" alt="" loading="lazy" decoding="async" style="display: block; width: 100%; height: 100%; object-fit: cover" />
+              </div>
+              <div style="position: relative; z-index: 2; pointer-events: none">
+                <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: {{ accent }}">01</div>
+                <h3 style="margin: 8px 0 0; font-family: Archivo, sans-serif; font-size: 21px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.15; color: #14121f"><a href="website-design-development.dc.html" style="color: #14121f" style-hover="color:#c2412a">Website Design &amp; Development</a></h3>
+                <p style="margin: 10px 0 0; font-size: 16.5px; line-height: 1.55; font-weight: 400; color: rgba(20,18,32,0.9); max-width: 30ch">Designed, then built — layout, states and code.</p>
+              </div>
+            </div>
+            <div style="position: relative; background: transparent; box-shadow: 0 0 0 0.5px rgba(20,18,32,0.28); padding: 26px 24px 28px; display: flex; flex-direction: column; gap: 16px; transition: background 160ms ease" style-hover="background:rgba(255,255,255,0.42)">
+              <a href="ecommerce-website-development.dc.html" aria-label="Open service page" style="position: absolute; inset: 0; z-index: 1; display: block"></a>
+              <div style="margin: -26px -24px 0; aspect-ratio: 3 / 2; overflow: hidden; border-bottom: 1px solid rgba(20,18,32,0.18)">
+                <img src="assets/service-02.webp" alt="" loading="lazy" decoding="async" style="display: block; width: 100%; height: 100%; object-fit: cover" />
+              </div>
+              <div style="position: relative; z-index: 2; pointer-events: none">
+                <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: {{ accent }}">02</div>
+                <h3 style="margin: 8px 0 0; font-family: Archivo, sans-serif; font-size: 21px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.15; color: #14121f"><a href="ecommerce-website-development.dc.html" style="color: #14121f" style-hover="color:#c2412a">E-Commerce Solutions</a></h3>
+                <p style="margin: 10px 0 0; font-size: 16.5px; line-height: 1.55; font-weight: 400; color: rgba(20,18,32,0.9); max-width: 30ch">Storefront, checkout and catalogue that scales.</p>
+              </div>
+            </div>
+            <div style="position: relative; background: transparent; box-shadow: 0 0 0 0.5px rgba(20,18,32,0.28); padding: 26px 24px 28px; display: flex; flex-direction: column; gap: 16px; transition: background 160ms ease" style-hover="background:rgba(255,255,255,0.42)">
+              <a href="wordpress-services.dc.html" aria-label="Open service page" style="position: absolute; inset: 0; z-index: 1; display: block"></a>
+              <div style="margin: -26px -24px 0; aspect-ratio: 3 / 2; overflow: hidden; border-bottom: 1px solid rgba(20,18,32,0.18)">
+                <img src="assets/service-03.webp" alt="" loading="lazy" decoding="async" style="display: block; width: 100%; height: 100%; object-fit: cover" />
+              </div>
+              <div style="position: relative; z-index: 2; pointer-events: none">
+                <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: {{ accent }}">03</div>
+                <h3 style="margin: 8px 0 0; font-family: Archivo, sans-serif; font-size: 21px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.15; color: #14121f"><a href="wordpress-services.dc.html" style="color: #14121f" style-hover="color:#c2412a">WordPress Services</a></h3>
+                <p style="margin: 10px 0 0; font-size: 16.5px; line-height: 1.55; font-weight: 400; color: rgba(20,18,32,0.9); max-width: 30ch">Themes, plugins and editing your team can use.</p>
+              </div>
+            </div>
+            <div style="position: relative; background: transparent; box-shadow: 0 0 0 0.5px rgba(20,18,32,0.28); padding: 26px 24px 28px; display: flex; flex-direction: column; gap: 16px; transition: background 160ms ease" style-hover="background:rgba(255,255,255,0.42)">
+              <a href="software-development.dc.html" aria-label="Open service page" style="position: absolute; inset: 0; z-index: 1; display: block"></a>
+              <div style="margin: -26px -24px 0; aspect-ratio: 3 / 2; overflow: hidden; border-bottom: 1px solid rgba(20,18,32,0.18)">
+                <img src="assets/service-04.webp" alt="" loading="lazy" decoding="async" style="display: block; width: 100%; height: 100%; object-fit: cover" />
+              </div>
+              <div style="position: relative; z-index: 2; pointer-events: none">
+                <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: {{ accent }}">04</div>
+                <h3 style="margin: 8px 0 0; font-family: Archivo, sans-serif; font-size: 21px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.15; color: #14121f"><a href="software-development.dc.html" style="color: #14121f" style-hover="color:#c2412a">Software Development</a></h3>
+                <p style="margin: 10px 0 0; font-size: 16.5px; line-height: 1.55; font-weight: 400; color: rgba(20,18,32,0.9); max-width: 30ch">Bespoke tools built to one workflow.</p>
+              </div>
+            </div>
+            <div style="position: relative; background: transparent; box-shadow: 0 0 0 0.5px rgba(20,18,32,0.28); padding: 26px 24px 28px; display: flex; flex-direction: column; gap: 16px; transition: background 160ms ease" style-hover="background:rgba(255,255,255,0.42)">
+              <a href="business-automation.dc.html" aria-label="Open service page" style="position: absolute; inset: 0; z-index: 1; display: block"></a>
+              <div style="margin: -26px -24px 0; aspect-ratio: 3 / 2; overflow: hidden; border-bottom: 1px solid rgba(20,18,32,0.18)">
+                <img src="assets/service-05.webp" alt="" loading="lazy" decoding="async" style="display: block; width: 100%; height: 100%; object-fit: cover" />
+              </div>
+              <div style="position: relative; z-index: 2; pointer-events: none">
+                <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: {{ accent }}">05</div>
+                <h3 style="margin: 8px 0 0; font-family: Archivo, sans-serif; font-size: 21px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.15; color: #14121f"><a href="business-automation.dc.html" style="color: #14121f" style-hover="color:#c2412a">Business Automation</a></h3>
+                <p style="margin: 10px 0 0; font-size: 16.5px; line-height: 1.55; font-weight: 400; color: rgba(20,18,32,0.9); max-width: 30ch">Manual steps replaced with something that runs itself.</p>
+              </div>
+            </div>
+            <div style="position: relative; background: transparent; box-shadow: 0 0 0 0.5px rgba(20,18,32,0.28); padding: 26px 24px 28px; display: flex; flex-direction: column; gap: 16px; transition: background 160ms ease" style-hover="background:rgba(255,255,255,0.42)">
+              <a href="domain-hosting-business-email.dc.html" aria-label="Open service page" style="position: absolute; inset: 0; z-index: 1; display: block"></a>
+              <div style="margin: -26px -24px 0; aspect-ratio: 3 / 2; overflow: hidden; border-bottom: 1px solid rgba(20,18,32,0.18)">
+                <img src="assets/service-06.webp" alt="" loading="lazy" decoding="async" style="display: block; width: 100%; height: 100%; object-fit: cover" />
+              </div>
+              <div style="position: relative; z-index: 2; pointer-events: none">
+                <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: {{ accent }}">06</div>
+                <h3 style="margin: 8px 0 0; font-family: Archivo, sans-serif; font-size: 21px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.15; color: #14121f"><a href="domain-hosting-business-email.dc.html" style="color: #14121f" style-hover="color:#c2412a">Domain, Hosting &amp; Business Email</a></h3>
+                <p style="margin: 10px 0 0; font-size: 16.5px; line-height: 1.55; font-weight: 400; color: rgba(20,18,32,0.9); max-width: 30ch">The address, the server and email on your own name.</p>
+              </div>
+            </div>
+            <div style="position: relative; background: transparent; box-shadow: 0 0 0 0.5px rgba(20,18,32,0.28); padding: 26px 24px 28px; display: flex; flex-direction: column; gap: 16px; transition: background 160ms ease" style-hover="background:rgba(255,255,255,0.42)">
+              <a href="seo-services.dc.html" aria-label="Open service page" style="position: absolute; inset: 0; z-index: 1; display: block"></a>
+              <div style="margin: -26px -24px 0; aspect-ratio: 3 / 2; overflow: hidden; border-bottom: 1px solid rgba(20,18,32,0.18)">
+                <img src="assets/service-07.webp" alt="" loading="lazy" decoding="async" style="display: block; width: 100%; height: 100%; object-fit: cover" />
+              </div>
+              <div style="position: relative; z-index: 2; pointer-events: none">
+                <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: {{ accent }}">07</div>
+                <h3 style="margin: 8px 0 0; font-family: Archivo, sans-serif; font-size: 21px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.15; color: #14121f"><a href="seo-services.dc.html" style="color: #14121f" style-hover="color:#c2412a">SEO Services</a></h3>
+                <p style="margin: 10px 0 0; font-size: 16.5px; line-height: 1.55; font-weight: 400; color: rgba(20,18,32,0.9); max-width: 30ch">Technical and content work to get you found.</p>
+              </div>
+            </div>
+            <div style="position: relative; background: transparent; box-shadow: 0 0 0 0.5px rgba(20,18,32,0.28); padding: 26px 24px 28px; display: flex; flex-direction: column; gap: 16px; transition: background 160ms ease" style-hover="background:rgba(255,255,255,0.42)">
+              <a href="digital-marketing.dc.html" aria-label="Open service page" style="position: absolute; inset: 0; z-index: 1; display: block"></a>
+              <div style="margin: -26px -24px 0; aspect-ratio: 3 / 2; overflow: hidden; border-bottom: 1px solid rgba(20,18,32,0.18)">
+                <img src="assets/service-08.webp" alt="" loading="lazy" decoding="async" style="display: block; width: 100%; height: 100%; object-fit: cover" />
+              </div>
+              <div style="position: relative; z-index: 2; pointer-events: none">
+                <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: {{ accent }}">08</div>
+                <h3 style="margin: 8px 0 0; font-family: Archivo, sans-serif; font-size: 21px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.15; color: #14121f"><a href="digital-marketing.dc.html" style="color: #14121f" style-hover="color:#c2412a">Digital Marketing</a></h3>
+                <p style="margin: 10px 0 0; font-size: 16.5px; line-height: 1.55; font-weight: 400; color: rgba(20,18,32,0.9); max-width: 30ch">Campaigns measured on leads, not impressions.</p>
+              </div>
+            </div>
+            <div style="position: relative; background: transparent; box-shadow: 0 0 0 0.5px rgba(20,18,32,0.28); padding: 26px 24px 28px; display: flex; flex-direction: column; gap: 16px; transition: background 160ms ease" style-hover="background:rgba(255,255,255,0.42)">
+              <a href="social-media-services.dc.html" aria-label="Open service page" style="position: absolute; inset: 0; z-index: 1; display: block"></a>
+              <div style="margin: -26px -24px 0; aspect-ratio: 3 / 2; overflow: hidden; border-bottom: 1px solid rgba(20,18,32,0.18)">
+                <img src="assets/service-09.webp" alt="" loading="lazy" decoding="async" style="display: block; width: 100%; height: 100%; object-fit: cover" />
+              </div>
+              <div style="position: relative; z-index: 2; pointer-events: none">
+                <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: {{ accent }}">09</div>
+                <h3 style="margin: 8px 0 0; font-family: Archivo, sans-serif; font-size: 21px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.15; color: #14121f"><a href="social-media-services.dc.html" style="color: #14121f" style-hover="color:#c2412a">Social Media Services</a></h3>
+                <p style="margin: 10px 0 0; font-size: 16.5px; line-height: 1.55; font-weight: 400; color: rgba(20,18,32,0.9); max-width: 30ch">Profiles, posting and the calendar behind them.</p>
+              </div>
+            </div>
+            <div style="position: relative; background: transparent; box-shadow: 0 0 0 0.5px rgba(20,18,32,0.28); padding: 26px 24px 28px; display: flex; flex-direction: column; gap: 16px; transition: background 160ms ease" style-hover="background:rgba(255,255,255,0.42)">
+              <a href="graphic-design.dc.html" aria-label="Open service page" style="position: absolute; inset: 0; z-index: 1; display: block"></a>
+              <div style="margin: -26px -24px 0; aspect-ratio: 3 / 2; overflow: hidden; border-bottom: 1px solid rgba(20,18,32,0.18)">
+                <img src="assets/service-10.webp" alt="" loading="lazy" decoding="async" style="display: block; width: 100%; height: 100%; object-fit: cover" />
+              </div>
+              <div style="position: relative; z-index: 2; pointer-events: none">
+                <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: {{ accent }}">10</div>
+                <h3 style="margin: 8px 0 0; font-family: Archivo, sans-serif; font-size: 21px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.15; color: #14121f"><a href="graphic-design.dc.html" style="color: #14121f" style-hover="color:#c2412a">Graphic Design</a></h3>
+                <p style="margin: 10px 0 0; font-size: 16.5px; line-height: 1.55; font-weight: 400; color: rgba(20,18,32,0.9); max-width: 30ch">Marketing and promotional assets that hold up in print.</p>
+              </div>
+            </div>
+            <div style="position: relative; background: transparent; box-shadow: 0 0 0 0.5px rgba(20,18,32,0.28); padding: 26px 24px 28px; display: flex; flex-direction: column; gap: 16px; transition: background 160ms ease" style-hover="background:rgba(255,255,255,0.42)">
+              <a href="branding.dc.html" aria-label="Open service page" style="position: absolute; inset: 0; z-index: 1; display: block"></a>
+              <div style="margin: -26px -24px 0; aspect-ratio: 3 / 2; overflow: hidden; border-bottom: 1px solid rgba(20,18,32,0.18)">
+                <img src="assets/service-11.webp" alt="" loading="lazy" decoding="async" style="display: block; width: 100%; height: 100%; object-fit: cover" />
+              </div>
+              <div style="position: relative; z-index: 2; pointer-events: none">
+                <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: {{ accent }}">11</div>
+                <h3 style="margin: 8px 0 0; font-family: Archivo, sans-serif; font-size: 21px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.15; color: #14121f"><a href="branding.dc.html" style="color: #14121f" style-hover="color:#c2412a">Branding</a></h3>
+                <p style="margin: 10px 0 0; font-size: 16.5px; line-height: 1.55; font-weight: 400; color: rgba(20,18,32,0.9); max-width: 30ch">Identity, marks and the rules that keep them consistent.</p>
+              </div>
+            </div>
+            <div style="position: relative; background: transparent; box-shadow: 0 0 0 0.5px rgba(20,18,32,0.28); padding: 26px 24px 28px; display: flex; flex-direction: column; gap: 16px; transition: background 160ms ease" style-hover="background:rgba(255,255,255,0.42)">
+              <a href="website-content.dc.html" aria-label="Open service page" style="position: absolute; inset: 0; z-index: 1; display: block"></a>
+              <div style="margin: -26px -24px 0; aspect-ratio: 3 / 2; overflow: hidden; border-bottom: 1px solid rgba(20,18,32,0.18)">
+                <img src="assets/service-12.webp" alt="" loading="lazy" decoding="async" style="display: block; width: 100%; height: 100%; object-fit: cover" />
+              </div>
+              <div style="position: relative; z-index: 2; pointer-events: none">
+                <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: {{ accent }}">12</div>
+                <h3 style="margin: 8px 0 0; font-family: Archivo, sans-serif; font-size: 21px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.15; color: #14121f"><a href="website-content.dc.html" style="color: #14121f" style-hover="color:#c2412a">Website Content</a></h3>
+                <p style="margin: 10px 0 0; font-size: 16.5px; line-height: 1.55; font-weight: 400; color: rgba(20,18,32,0.9); max-width: 30ch">Copy and structure written for the page it sits on.</p>
+              </div>
+            </div>
+            <div style="position: relative; background: transparent; box-shadow: 0 0 0 0.5px rgba(20,18,32,0.28); padding: 26px 24px 28px; display: flex; flex-direction: column; gap: 16px; transition: background 160ms ease" style-hover="background:rgba(255,255,255,0.42)">
+              <a href="website-performance.dc.html" aria-label="Open service page" style="position: absolute; inset: 0; z-index: 1; display: block"></a>
+              <div style="margin: -26px -24px 0; aspect-ratio: 3 / 2; overflow: hidden; border-bottom: 1px solid rgba(20,18,32,0.18)">
+                <img src="assets/service-13.webp" alt="" loading="lazy" decoding="async" style="display: block; width: 100%; height: 100%; object-fit: cover" />
+              </div>
+              <div style="position: relative; z-index: 2; pointer-events: none">
+                <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: {{ accent }}">13</div>
+                <h3 style="margin: 8px 0 0; font-family: Archivo, sans-serif; font-size: 21px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.15; color: #14121f"><a href="website-performance.dc.html" style="color: #14121f" style-hover="color:#c2412a">Website Performance</a></h3>
+                <p style="margin: 10px 0 0; font-size: 16.5px; line-height: 1.55; font-weight: 400; color: rgba(20,18,32,0.9); max-width: 30ch">Load times, Core Web Vitals and what causes them.</p>
+              </div>
+            </div>
+            <div style="position: relative; background: transparent; box-shadow: 0 0 0 0.5px rgba(20,18,32,0.28); padding: 26px 24px 28px; display: flex; flex-direction: column; gap: 16px; transition: background 160ms ease" style-hover="background:rgba(255,255,255,0.42)">
+              <a href="website-security.dc.html" aria-label="Open service page" style="position: absolute; inset: 0; z-index: 1; display: block"></a>
+              <div style="margin: -26px -24px 0; aspect-ratio: 3 / 2; overflow: hidden; border-bottom: 1px solid rgba(20,18,32,0.18)">
+                <img src="assets/service-14.webp" alt="" loading="lazy" decoding="async" style="display: block; width: 100%; height: 100%; object-fit: cover" />
+              </div>
+              <div style="position: relative; z-index: 2; pointer-events: none">
+                <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: {{ accent }}">14</div>
+                <h3 style="margin: 8px 0 0; font-family: Archivo, sans-serif; font-size: 21px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.15; color: #14121f"><a href="website-security.dc.html" style="color: #14121f" style-hover="color:#c2412a">Website Security</a></h3>
+                <p style="margin: 10px 0 0; font-size: 16.5px; line-height: 1.55; font-weight: 400; color: rgba(20,18,32,0.9); max-width: 30ch">Certificates, hardening and monitoring for attacks.</p>
+              </div>
+            </div>
+            <div style="position: relative; background: transparent; box-shadow: 0 0 0 0.5px rgba(20,18,32,0.28); padding: 26px 24px 28px; display: flex; flex-direction: column; gap: 16px; transition: background 160ms ease" style-hover="background:rgba(255,255,255,0.42)">
+              <a href="website-migration-recovery.dc.html" aria-label="Open service page" style="position: absolute; inset: 0; z-index: 1; display: block"></a>
+              <div style="margin: -26px -24px 0; aspect-ratio: 3 / 2; overflow: hidden; border-bottom: 1px solid rgba(20,18,32,0.18)">
+                <img src="assets/service-15.webp" alt="" loading="lazy" decoding="async" style="display: block; width: 100%; height: 100%; object-fit: cover" />
+              </div>
+              <div style="position: relative; z-index: 2; pointer-events: none">
+                <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: {{ accent }}">15</div>
+                <h3 style="margin: 8px 0 0; font-family: Archivo, sans-serif; font-size: 21px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.15; color: #14121f"><a href="website-migration-recovery.dc.html" style="color: #14121f" style-hover="color:#c2412a">Website Migration &amp; Recovery</a></h3>
+                <p style="margin: 10px 0 0; font-size: 16.5px; line-height: 1.55; font-weight: 400; color: rgba(20,18,32,0.9); max-width: 30ch">Moving hosts, or getting a broken site back.</p>
+              </div>
+            </div>
+            <div style="position: relative; background: transparent; box-shadow: 0 0 0 0.5px rgba(20,18,32,0.28); padding: 26px 24px 28px; display: flex; flex-direction: column; gap: 16px; transition: background 160ms ease" style-hover="background:rgba(255,255,255,0.42)">
+              <a href="ecommerce-support.dc.html" aria-label="Open service page" style="position: absolute; inset: 0; z-index: 1; display: block"></a>
+              <div style="margin: -26px -24px 0; aspect-ratio: 3 / 2; overflow: hidden; border-bottom: 1px solid rgba(20,18,32,0.18)">
+                <img src="assets/service-16.webp" alt="" loading="lazy" decoding="async" style="display: block; width: 100%; height: 100%; object-fit: cover" />
+              </div>
+              <div style="position: relative; z-index: 2; pointer-events: none">
+                <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: {{ accent }}">16</div>
+                <h3 style="margin: 8px 0 0; font-family: Archivo, sans-serif; font-size: 21px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.15; color: #14121f"><a href="ecommerce-support.dc.html" style="color: #14121f" style-hover="color:#c2412a">E-Commerce Support</a></h3>
+                <p style="margin: 10px 0 0; font-size: 16.5px; line-height: 1.55; font-weight: 400; color: rgba(20,18,32,0.9); max-width: 30ch">Ongoing help with orders, stock and listings.</p>
+              </div>
+            </div>
+            <div style="position: relative; background: transparent; box-shadow: 0 0 0 0.5px rgba(20,18,32,0.28); padding: 26px 24px 28px; display: flex; flex-direction: column; gap: 16px; transition: background 160ms ease" style-hover="background:rgba(255,255,255,0.42)">
+              <a href="cloud-digital-solutions.dc.html" aria-label="Open service page" style="position: absolute; inset: 0; z-index: 1; display: block"></a>
+              <div style="margin: -26px -24px 0; aspect-ratio: 3 / 2; overflow: hidden; border-bottom: 1px solid rgba(20,18,32,0.18)">
+                <img src="assets/service-17.webp" alt="" loading="lazy" decoding="async" style="display: block; width: 100%; height: 100%; object-fit: cover" />
+              </div>
+              <div style="position: relative; z-index: 2; pointer-events: none">
+                <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: {{ accent }}">17</div>
+                <h3 style="margin: 8px 0 0; font-family: Archivo, sans-serif; font-size: 21px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.15; color: #14121f"><a href="cloud-digital-solutions.dc.html" style="color: #14121f" style-hover="color:#c2412a">Cloud &amp; Digital Solutions</a></h3>
+                <p style="margin: 10px 0 0; font-size: 16.5px; line-height: 1.55; font-weight: 400; color: rgba(20,18,32,0.9); max-width: 30ch">Infrastructure sized to what you actually run.</p>
+              </div>
+            </div>
+            <div style="position: relative; background: transparent; box-shadow: 0 0 0 0.5px rgba(20,18,32,0.28); padding: 26px 24px 28px; display: flex; flex-direction: column; gap: 16px; transition: background 160ms ease" style-hover="background:rgba(255,255,255,0.42)">
+              <a href="it-business-consultancy.dc.html" aria-label="Open service page" style="position: absolute; inset: 0; z-index: 1; display: block"></a>
+              <div style="margin: -26px -24px 0; aspect-ratio: 3 / 2; overflow: hidden; border-bottom: 1px solid rgba(20,18,32,0.18)">
+                <img src="assets/service-18.webp" alt="" loading="lazy" decoding="async" style="display: block; width: 100%; height: 100%; object-fit: cover" />
+              </div>
+              <div style="position: relative; z-index: 2; pointer-events: none">
+                <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: {{ accent }}">20</div>
+                <h3 style="margin: 8px 0 0; font-family: Archivo, sans-serif; font-size: 21px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.15; color: #14121f"><a href="it-business-consultancy.dc.html" style="color: #14121f" style-hover="color:#c2412a">IT &amp; Business Consultancy</a></h3>
+                <p style="margin: 10px 0 0; font-size: 16.5px; line-height: 1.55; font-weight: 400; color: rgba(20,18,32,0.9); max-width: 30ch">An outside read on what to build and what to drop.</p>
+              </div>
+            </div>
+            <div style="grid-column: {{ ctaSpan }}; background: rgba(20,18,32,0.9); color: #f5f3ee; padding: 26px 24px 28px; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 20px 40px">
+              <div>
+                <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: rgba(245,243,238,0.45)">19</div>
+                <h3 style="margin: 8px 0 0; font-family: Archivo, sans-serif; font-size: 21px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.15">Something not listed?</h3>
+                <p style="margin: 10px 0 0; font-size: 16.5px; line-height: 1.5; font-weight: 300; color: rgba(245,243,238,0.72); max-width: 28ch">Describe it and we'll tell you whether we're the right studio for it.</p>
+              </div>
+              <a href="#contact" style="font-family: Archivo, sans-serif; font-size: 14px; font-weight: 600; color: #f5f3ee; border-bottom: 1px solid rgba(245,243,238,0.45); align-self: flex-start; padding-bottom: 2px" style-hover="color:#e2704f;border-color:#e2704f">Send us the brief</a>
+              <div style="flex: 1 1 260px; min-width: 220px; display: flex; flex-direction: column; gap: 8px">
+                <div style="font-family: Archivo, sans-serif; font-size: 10.5px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(245,243,238,0.5)">Temporary upload — tell me where to map it</div>
+                <div style="aspect-ratio: 3 / 2">
+                  <image-slot id="wda-staging" shape="rect" fit="contain" placeholder="Upload image here"></image-slot>
+                </div>
+              </div>
+            </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" data-screen-label="Process" style="position: relative; border-bottom: 1px solid #14121f">
+    <div style="max-width: 1420px; margin: 0 auto; padding: 76px 36px 84px">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; flex-wrap: wrap; margin-bottom: 44px">
+        <h2 style="margin: 0; font-family: Archivo, sans-serif; font-weight: 700; font-size: clamp(30px, 3.6vw, 54px); line-height: 1; letter-spacing: -0.03em; max-width: 16ch">Process</h2>
+        <p style="margin: 0; max-width: 40ch; font-size: 18px; line-height: 1.55; color: rgba(20,18,32,0.82)">Three points of contact from first call to launch. You always know which one we're in.</p>
+      </div>
+      <div style="border-top: 1px solid #14121f; display: grid; grid-template-columns: {{ procCols }}; gap: {{ procGap }}; align-items: stretch">
+        <div>
+          <div style="padding: 60px 0; border-bottom: 1px solid rgba(20,18,32,0.2)">
+            <div style="font-family: Archivo, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; color: {{ accent }}">01</div>
+            <h3 style="margin: 14px 0 0; font-family: Archivo, sans-serif; font-size: clamp(28px, 3.2vw, 48px); font-weight: 700; letter-spacing: -0.035em; line-height: 1; color: #14121f">Let's talk</h3>
+            <p style="margin: 18px 0 0; font-size: 18px; line-height: 1.6; color: rgba(20,18,32,0.82); max-width: 40ch">We go through what the site has to do, who it is for and what already exists. You leave with a page count, a timeline and a price.</p>
+          </div>
+          <div style="padding: 60px 0; border-bottom: 1px solid rgba(20,18,32,0.2)">
+            <div style="font-family: Archivo, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; color: {{ accent }}">02</div>
+            <h3 style="margin: 14px 0 0; font-family: Archivo, sans-serif; font-size: clamp(28px, 3.2vw, 48px); font-weight: 700; letter-spacing: -0.035em; line-height: 1; color: #14121f">Draw &amp; refine</h3>
+            <p style="margin: 18px 0 0; font-size: 18px; line-height: 1.6; color: rgba(20,18,32,0.82); max-width: 40ch">Wireframes first, then visual design. You see it at each stage and mark it up. Nothing gets built until the drawing is signed off.</p>
+          </div>
+          <div style="padding: 60px 0 0; border-bottom: none">
+            <div style="font-family: Archivo, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; color: {{ accent }}">03</div>
+            <h3 style="margin: 14px 0 0; font-family: Archivo, sans-serif; font-size: clamp(28px, 3.2vw, 48px); font-weight: 700; letter-spacing: -0.035em; line-height: 1; color: #14121f">Build &amp; launch</h3>
+            <p style="margin: 18px 0 0; font-size: 18px; line-height: 1.6; color: rgba(20,18,32,0.82); max-width: 40ch">We develop, test and move it onto your domain and hosting, then hand over the keys and stay on for maintenance.</p>
+          </div>
+        </div>
+        <div style="align-self: stretch">
+          <div style="position: sticky; top: {{ procStickyTop }}; padding-top: 60px">
+          <div style="border: 1px solid rgba(20,18,32,0.22); background: rgba(255,255,255,0.24); padding: 24px">
+            <svg viewBox="0 0 400 300" width="100%" style="display: block" aria-label="A page being drawn, then built">
+              <g fill="none" stroke="rgba(20,18,32,0.5)" stroke-width="1.4" stroke-linecap="square">
+                <rect x="20" y="18" width="360" height="264"></rect>
+                <rect x="44" y="42" width="312" height="36"></rect>
+                <rect x="44" y="96" width="184" height="100"></rect>
+                <rect x="244" y="96" width="112" height="100"></rect>
+                <rect x="44" y="214" width="96" height="48"></rect>
+                <rect x="156" y="214" width="96" height="48"></rect>
+                <rect x="268" y="214" width="88" height="48"></rect>
+              </g>
+              <g fill="none" stroke="{{ accent }}" stroke-width="1.7">
+                <ellipse cx="300" cy="146" rx="76" ry="42"></ellipse>
+                <line x1="300" y1="188" x2="326" y2="220"></line>
+                <line x1="60" y1="146" x2="150" y2="146"></line>
+              </g>
+              <text x="380" y="292" text-anchor="end" font-family="Archivo, sans-serif" font-size="12" font-weight="600" fill="rgba(20,18,32,0.55)">plan → build → live</text>
+            </svg>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="enterprise" data-screen-label="Commerce" style="position: relative; border-bottom: 1px solid #14121f">
+    <div style="max-width: 1420px; margin: 0 auto; padding: 0 36px; display: grid; grid-template-columns: {{ commerceCols }}">
+      <div style="padding: 68px {{ entPadR }} 68px 0; border-right: {{ entDivider }}">
+        <div style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: {{ accent }}">Commerce &amp; enterprise</div>
+        <h2 style="margin: 22px 0 0; font-family: Archivo, sans-serif; font-weight: 700; font-size: clamp(30px, 3.6vw, 54px); line-height: 1.02; letter-spacing: -0.03em; max-width: 18ch">The same board, sized for a catalogue.</h2>
+        <p style="margin: 26px 0 0; max-width: 46ch; font-size: 19px; line-height: 1.55; font-weight: 300; color: rgba(20,18,32,0.86)">A thousand products need the same thing a five-page site needs: a fixed centre and a scoped radius. Catalogue, checkout, inventory and the systems behind them get drawn as one project, not bolted on later.</p>
+        <p style="margin: 20px 0 0; max-width: 46ch; font-size: 19px; line-height: 1.55; font-weight: 300; color: rgba(20,18,32,0.86)">Custom web applications and portals sit under the same roof — built to the brief, not to a template.</p>
+        <div style="margin-top: 36px; display: flex; gap: 30px; flex-wrap: wrap; font-family: Archivo, sans-serif">
+          <div style="border-top: 2px solid rgba(20,18,32,0.85); padding-top: 10px; min-width: 190px">
+            <div style="font-size: 17px; font-weight: 600; letter-spacing: -0.015em">E-Commerce Development</div>
+            <div style="font-family: Newsreader, serif; font-size: 15px; font-weight: 400; color: rgba(20,18,32,0.78); margin-top: 4px">Storefront, checkout, catalogue</div>
+          </div>
+          <div style="border-top: 2px solid rgba(20,18,32,0.85); padding-top: 10px; min-width: 190px">
+            <div style="font-size: 17px; font-weight: 600; letter-spacing: -0.015em">Custom Web Applications</div>
+            <div style="font-family: Newsreader, serif; font-size: 15px; font-weight: 400; color: rgba(20,18,32,0.78); margin-top: 4px">Built to one workflow</div>
+          </div>
+        </div>
+      </div>
+      <div style="padding: 68px 0 68px {{ entPadL }}">
+        <div style="border: 1px solid rgba(20,18,32,0.32); background: rgba(255,255,255,0.28); padding: 18px">
+          <div style="display: flex; justify-content: space-between; font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(20,18,32,0.7); margin-bottom: 14px">
+            <span>Sketch</span><span style="color: {{ accent }}">Built</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: center">
+            <svg viewBox="0 0 300 400" width="100%" style="display: block; overflow: visible" aria-label="Wireframe of a catalogue page">
+              <g fill="none" stroke="rgba(20,18,32,0.55)" stroke-width="1.4" stroke-linecap="square">
+                <rect x="4" y="4" width="292" height="392"></rect>
+                <rect x="20" y="20" width="260" height="26"></rect>
+                <rect x="20" y="60" width="260" height="96"></rect>
+                <line x1="34" y1="104" x2="150" y2="104"></line>
+                <line x1="34" y1="120" x2="118" y2="120"></line>
+                <rect x="20" y="172" width="80" height="90"></rect>
+                <rect x="110" y="172" width="80" height="90"></rect>
+                <rect x="200" y="172" width="80" height="90"></rect>
+                <rect x="20" y="278" width="80" height="90"></rect>
+                <rect x="110" y="278" width="80" height="90"></rect>
+                <rect x="200" y="278" width="80" height="90"></rect>
+              </g>
+              <g fill="none" stroke="{{ accent }}" stroke-width="1.6">
+                <rect x="34" y="136" width="52" height="12"></rect>
+              </g>
+            </svg>
+            <img src="assets/hero-tablet-crop.png" alt="The same catalogue layout, built and running" style="display: block; width: 100%; height: auto" />
+          </div>
+          <div style="margin-top: 16px; font-size: 16px; font-weight: 300; font-style: italic; color: rgba(20,18,32,0.82)">Left: the plan. Right: what ships. Same measurements.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" data-screen-label="Contact" style="position: relative; background: #14121f; color: #f5f3ee">
+    <div style="max-width: 1420px; margin: 0 auto; padding: 84px 36px 78px; display: grid; grid-template-columns: {{ contactCols }}; gap: {{ gap }}; align-items: end">
+      <div>
+        <div style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #e2704f">Start a project</div>
+        <h2 style="margin: 24px 0 0; font-family: Archivo, sans-serif; font-weight: 700; font-size: clamp(38px, 5.4vw, 86px); line-height: 0.95; letter-spacing: -0.035em; max-width: 14ch">Bring us the brief. We'll draw the rest.</h2>
+      </div>
+      <div>
+        <p style="margin: 0; font-size: 19px; line-height: 1.55; font-weight: 300; color: rgba(244,239,230,0.76); max-width: 38ch">Tell us what the site has to do and who it's for. We'll come back with a plan, a page count and a price — not a proposal deck.</p>
+        <div style="margin-top: 32px; display: flex; gap: 20px; align-items: center; flex-wrap: wrap">
+          <a href="mailto:info@WebsiteDesignArt.com" style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 14px; color: #14121f; background: #f5f3ee; padding: 15px 26px; transition: background 180ms ease" style-hover="background:#e2704f;color:#14121f">info@WebsiteDesignArt.com</a>
+          <a href="#disciplines" style="font-family: Archivo, sans-serif; font-weight: 500; font-size: 14px; color: rgba(244,239,230,0.8); border-bottom: 1px solid rgba(244,239,230,0.4); padding-bottom: 2px" style-hover="color:#e2704f">Or start from a service</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer data-screen-label="Footer" style="background: #14121f; color: rgba(244,239,230,0.7); border-top: 1px solid rgba(244,239,230,0.18)">
+    <div style="max-width: 1420px; margin: 0 auto; padding: 30px 36px 40px; display: flex; justify-content: space-between; gap: 30px; flex-wrap: wrap; font-family: Archivo, sans-serif; font-size: 12.5px; font-weight: 500">
+      <div>© 2026 Website DesignART</div>
+      <div style="display: flex; gap: 22px; flex-wrap: wrap">
+        <a href="#disciplines" style="color: rgba(244,239,230,0.7)" style-hover="color:#e2704f">Design &amp; build</a>
+        <a href="#enterprise" style="color: rgba(244,239,230,0.7)" style-hover="color:#e2704f">Commerce</a>
+        <a href="#disciplines" style="color: rgba(244,239,230,0.7)" style-hover="color:#e2704f">Hosting &amp; email</a>
+        <a href="about.dc.html" style="color: rgba(244,239,230,0.7)" style-hover="color:#e2704f">About</a>
+        <a href="contact.dc.html" style="color: rgba(244,239,230,0.7)" style-hover="color:#e2704f">Contact</a>
+        <a href="tel:+916393503938" style="color: rgba(244,239,230,0.7)" style-hover="color:#e2704f">+91 6393 503 938</a>
+      </div>
+      <div>websitedesignart.com</div>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#c2412a&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#c2412a&quot;,&quot;#1f5c4c&quot;,&quot;#2b4a7d&quot;,&quot;#8a5a2b&quot;]}}">
+
+class Component extends DCLogic {
+  state = {
+    narrow: typeof window !== 'undefined' && window.innerWidth < 940,
+    hero: 0,
+    menu: false,
+  };
+
+  _goHero(step) {
+    this.setState((s) => ({ hero: (s.hero + step + 4) % 4 }));
+  }
+
+  componentDidMount() {
+    this._onResize = () => {
+      const narrow = window.innerWidth < 940;
+      if (narrow !== this.state.narrow) this.setState({ narrow });
+    };
+    window.addEventListener('resize', this._onResize);
+
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this._onResize);
+  }
+
+  renderVals() {
+    const n = this.state.narrow;
+    return {
+      accent: this.props.accent ?? '#c2412a',
+      openMenu: () => this.setState({ menu: true }),
+      closeMenu: () => this.setState({ menu: false }),
+      menuOpacity: this.state.menu ? 1 : 0,
+      menuVis: this.state.menu ? 'visible' : 'hidden',
+      menuShift: this.state.menu ? 'translateY(0)' : 'translateY(-6px)',
+      heroShift: `-${this.state.hero * 25}%`,
+      heroCounter: `0${this.state.hero + 1} / 04`,
+      heroCaption: ['Built — activewear storefront', 'Project 02', 'Project 03', 'Project 04'][this.state.hero],
+      heroPrev: () => this._goHero(-1),
+      heroNext: () => this._goHero(1),
+      cardCols: n ? '1fr' : 'repeat(3, 1fr)',
+      pillarCols: n ? '1fr 1fr' : 'repeat(6, 1fr)',
+      ctaSpan: n ? 'auto' : 'span 3',
+      process: [
+        { n: '01', k: 'Discover', v: 'Goals, audience and scope, agreed before anything is drawn.' },
+        { n: '02', k: 'Design', v: 'Wireframes first, then visual design, checked against the brief.' },
+        { n: '03', k: 'Develop', v: 'Front and back end built on whichever platform actually fits.' },
+        { n: '04', k: 'Launch', v: 'Domain, hosting and email configured, then switched over.' },
+        { n: '05', k: 'Maintain', v: 'Updates, fixes and monitoring once the site is live.' },
+      ],
+      heroCols: n ? '1fr' : '1.05fr 0.95fr',
+      heroMinH: n ? 'auto' : 'calc(100vh - 46px)',
+      procCols: n ? '1fr' : '1fr 0.95fr',
+      procGap: n ? '28px' : '72px',
+      procStickyTop: n ? 'auto' : '96px',
+      entPadR: n ? '0' : '56px',
+      entPadL: n ? '0' : '56px',
+      entDivider: n ? 'none' : '1px solid rgba(20,18,32,0.2)',
+      heroBleedW: n ? '100%' : '93%',
+      heroBleedM: n ? '0' : '7%',
+      heroImgMax: n ? 'none' : '78vh',
+      stageCols: n ? '1fr 1fr' : 'repeat(5, 1fr)',
+      commerceCols: n ? '1fr' : '1.1fr 0.9fr',
+      contactCols: n ? '1fr' : '1.1fr 0.9fr',
+      gap: n ? '36px' : '64px',
+    };
+  }
+}
+
+</script>
+</body>
+</html>
