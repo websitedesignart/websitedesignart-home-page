@@ -23,7 +23,6 @@
   @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
   @media (prefers-reduced-motion: reduce) { [data-marquee] { animation: none !important; } }
 </style>
-<script src="./image-slot.js"></script>
 <script src="./backdrop.js"></script>
 </helmet>
 
@@ -386,12 +385,6 @@
                 <p style="margin: 10px 0 0; font-size: 16.5px; line-height: 1.5; font-weight: 300; color: rgba(245,243,238,0.72); max-width: 28ch">Describe it and we'll tell you whether we're the right studio for it.</p>
               </div>
               <a href="#contact" style="font-family: Archivo, sans-serif; font-size: 14px; font-weight: 600; color: #f5f3ee; border-bottom: 1px solid rgba(245,243,238,0.45); align-self: flex-start; padding-bottom: 2px" style-hover="color:#e2704f;border-color:#e2704f">Send us the brief</a>
-              <div style="flex: 1 1 260px; min-width: 220px; display: flex; flex-direction: column; gap: 8px">
-                <div style="font-family: Archivo, sans-serif; font-size: 10.5px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(245,243,238,0.5)">Temporary upload — tell me where to map it</div>
-                <div style="aspect-ratio: 3 / 2">
-                  <image-slot id="wda-staging" shape="rect" fit="contain" placeholder="Upload image here"></image-slot>
-                </div>
-              </div>
             </div>
       </div>
     </div>
