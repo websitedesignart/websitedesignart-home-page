@@ -27,6 +27,10 @@
   details.faq summary::-webkit-details-marker { display: none; }
   details.faq summary::after { content: "+"; font-family: Archivo, sans-serif; font-weight: 600; font-size: 22px; color: #c2412a; flex-shrink: 0; line-height: 1; }
   details.faq[open] summary::after { content: "\2212"; }
+  details.svc summary { cursor: pointer; list-style: none; }
+  details.svc summary::-webkit-details-marker { display: none; }
+  details.svc .svc-mark::after { content: "+"; font-family: Archivo, sans-serif; font-weight: 600; font-size: 19px; color: #c2412a; line-height: 1; }
+  details.svc[open] .svc-mark::after { content: "\2212"; }
 </style>
 <script src="./backdrop.js"></script>
 </helmet>
@@ -104,63 +108,100 @@
   <section data-screen-label="Sub-services" style="position: relative">
     <div style="max-width: 1420px; margin: 0 auto; padding: 0 36px 76px">
       <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; flex-wrap: wrap; padding: 26px 0 22px; border-top: 1px solid #14121f">
-        <h2 style="margin: 0; font-family: Archivo, sans-serif; font-weight: 700; font-size: clamp(24px, 2.6vw, 38px); line-height: 1; letter-spacing: -0.03em">What this covers</h2>
-        <div style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(20,18,32,0.6)">13 services</div>
+        <h2 style="margin: 0; font-family: Archivo, sans-serif; font-weight: 700; font-size: clamp(24px, 2.6vw, 38px); line-height: 1; letter-spacing: -0.03em">What we design and build</h2>
+        <div style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(20,18,32,0.6)">11 areas &#8212; tap to expand</div>
       </div>
       <div style="display: grid; grid-template-columns: {{ listCols }}; gap: 0 56px">
-          <div style="display: grid; grid-template-columns: 46px 1fr; gap: 14px; align-items: baseline; padding: 16px 8px 16px 0; border-bottom: 1px solid rgba(20,18,32,0.16); transition: background 140ms ease, padding-left 140ms ease" style-hover="background:rgba(255,255,255,0.4);padding-left:10px">
-            <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: {{ accent }}">01</div>
-            <div style="font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Website Design</div>
-          </div>
-          <div style="display: grid; grid-template-columns: 46px 1fr; gap: 14px; align-items: baseline; padding: 16px 8px 16px 0; border-bottom: 1px solid rgba(20,18,32,0.16); transition: background 140ms ease, padding-left 140ms ease" style-hover="background:rgba(255,255,255,0.4);padding-left:10px">
-            <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: {{ accent }}">02</div>
-            <div style="font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Website Development</div>
-          </div>
-          <div style="display: grid; grid-template-columns: 46px 1fr; gap: 14px; align-items: baseline; padding: 16px 8px 16px 0; border-bottom: 1px solid rgba(20,18,32,0.16); transition: background 140ms ease, padding-left 140ms ease" style-hover="background:rgba(255,255,255,0.4);padding-left:10px">
-            <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: {{ accent }}">03</div>
-            <div style="font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Business &amp; Corporate Websites</div>
-          </div>
-          <div style="display: grid; grid-template-columns: 46px 1fr; gap: 14px; align-items: baseline; padding: 16px 8px 16px 0; border-bottom: 1px solid rgba(20,18,32,0.16); transition: background 140ms ease, padding-left 140ms ease" style-hover="background:rgba(255,255,255,0.4);padding-left:10px">
-            <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: {{ accent }}">04</div>
-            <div style="font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Responsive Website Design</div>
-          </div>
-          <div style="display: grid; grid-template-columns: 46px 1fr; gap: 14px; align-items: baseline; padding: 16px 8px 16px 0; border-bottom: 1px solid rgba(20,18,32,0.16); transition: background 140ms ease, padding-left 140ms ease" style-hover="background:rgba(255,255,255,0.4);padding-left:10px">
-            <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: {{ accent }}">05</div>
-            <div style="font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Custom Website Development</div>
-          </div>
-          <div style="display: grid; grid-template-columns: 46px 1fr; gap: 14px; align-items: baseline; padding: 16px 8px 16px 0; border-bottom: 1px solid rgba(20,18,32,0.16); transition: background 140ms ease, padding-left 140ms ease" style-hover="background:rgba(255,255,255,0.4);padding-left:10px">
-            <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: {{ accent }}">06</div>
-            <div style="font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">CMS-Based Websites</div>
-          </div>
-          <div style="display: grid; grid-template-columns: 46px 1fr; gap: 14px; align-items: baseline; padding: 16px 8px 16px 0; border-bottom: 1px solid rgba(20,18,32,0.16); transition: background 140ms ease, padding-left 140ms ease" style-hover="background:rgba(255,255,255,0.4);padding-left:10px">
-            <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: {{ accent }}">07</div>
-            <div style="font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Static &amp; Dynamic Websites</div>
-          </div>
-          <div style="display: grid; grid-template-columns: 46px 1fr; gap: 14px; align-items: baseline; padding: 16px 8px 16px 0; border-bottom: 1px solid rgba(20,18,32,0.16); transition: background 140ms ease, padding-left 140ms ease" style-hover="background:rgba(255,255,255,0.4);padding-left:10px">
-            <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: {{ accent }}">08</div>
-            <div style="font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Website Redesign &amp; Revamp</div>
-          </div>
-          <div style="display: grid; grid-template-columns: 46px 1fr; gap: 14px; align-items: baseline; padding: 16px 8px 16px 0; border-bottom: 1px solid rgba(20,18,32,0.16); transition: background 140ms ease, padding-left 140ms ease" style-hover="background:rgba(255,255,255,0.4);padding-left:10px">
-            <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: {{ accent }}">09</div>
-            <div style="font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Landing Page Design</div>
-          </div>
-          <div style="display: grid; grid-template-columns: 46px 1fr; gap: 14px; align-items: baseline; padding: 16px 8px 16px 0; border-bottom: 1px solid rgba(20,18,32,0.16); transition: background 140ms ease, padding-left 140ms ease" style-hover="background:rgba(255,255,255,0.4);padding-left:10px">
-            <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: {{ accent }}">10</div>
-            <div style="font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Website UI/UX Design</div>
-          </div>
-          <div style="display: grid; grid-template-columns: 46px 1fr; gap: 14px; align-items: baseline; padding: 16px 8px 16px 0; border-bottom: 1px solid rgba(20,18,32,0.16); transition: background 140ms ease, padding-left 140ms ease" style-hover="background:rgba(255,255,255,0.4);padding-left:10px">
-            <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: {{ accent }}">11</div>
-            <div style="font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Web Portal Development</div>
-          </div>
-          <div style="display: grid; grid-template-columns: 46px 1fr; gap: 14px; align-items: baseline; padding: 16px 8px 16px 0; border-bottom: 1px solid rgba(20,18,32,0.16); transition: background 140ms ease, padding-left 140ms ease" style-hover="background:rgba(255,255,255,0.4);padding-left:10px">
-            <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: {{ accent }}">12</div>
-            <div style="font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Website Planning &amp; Consultancy</div>
-          </div>
-          <div style="display: grid; grid-template-columns: 46px 1fr; gap: 14px; align-items: baseline; padding: 16px 8px 16px 0; border-bottom: 1px solid rgba(20,18,32,0.16); transition: background 140ms ease, padding-left 140ms ease" style-hover="background:rgba(255,255,255,0.4);padding-left:10px">
-            <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: {{ accent }}">13</div>
-            <div style="font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Website Maintenance &amp; Support</div>
-          </div>
+          <details class="svc" style="border-bottom: 1px solid rgba(20,18,32,0.16); transition: background 140ms ease" style-hover="background:rgba(255,255,255,0.4)">
+            <summary style="display: grid; grid-template-columns: 46px 1fr auto; gap: 14px; align-items: baseline; padding: 16px 8px 16px 0">
+              <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: {{ accent }}">01</span>
+              <span style="font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Website Design</span>
+              <span class="svc-mark" aria-hidden="true"></span>
+            </summary>
+            <p style="margin: 0; padding: 0 8px 18px 60px; font-size: 16px; line-height: 1.6; color: rgba(20,18,32,0.84); max-width: 58ch">How your website looks and how it works for a visitor: page layouts, colours, type, and how easily people find what they came for &#8212; the part designers call UI/UX. Every layout is drawn and shown to you before it becomes a real page.</p>
+          </details>
+          <details class="svc" style="border-bottom: 1px solid rgba(20,18,32,0.16); transition: background 140ms ease" style-hover="background:rgba(255,255,255,0.4)">
+            <summary style="display: grid; grid-template-columns: 46px 1fr auto; gap: 14px; align-items: baseline; padding: 16px 8px 16px 0">
+              <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: {{ accent }}">02</span>
+              <span style="font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Website Development</span>
+              <span class="svc-mark" aria-hidden="true"></span>
+            </summary>
+            <p style="margin: 0; padding: 0 8px 18px 60px; font-size: 16px; line-height: 1.6; color: rgba(20,18,32,0.84); max-width: 58ch">The build itself: turning approved designs into a fast, working website with clean code, forms that reach you, and pages that hold up on slow connections.</p>
+          </details>
+          <details class="svc" style="border-bottom: 1px solid rgba(20,18,32,0.16); transition: background 140ms ease" style-hover="background:rgba(255,255,255,0.4)">
+            <summary style="display: grid; grid-template-columns: 46px 1fr auto; gap: 14px; align-items: baseline; padding: 16px 8px 16px 0">
+              <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: {{ accent }}">03</span>
+              <span style="font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Business &amp; Corporate Websites</span>
+              <span class="svc-mark" aria-hidden="true"></span>
+            </summary>
+            <p style="margin: 0; padding: 0 8px 18px 60px; font-size: 16px; line-height: 1.6; color: rgba(20,18,32,0.84); max-width: 58ch">Company sites that answer what buyers actually check: what you do, where you are, who you work with and how to reach you &#8212; organised so a first-time visitor understands it in one visit.</p>
+          </details>
+          <details class="svc" style="border-bottom: 1px solid rgba(20,18,32,0.16); transition: background 140ms ease" style-hover="background:rgba(255,255,255,0.4)">
+            <summary style="display: grid; grid-template-columns: 46px 1fr auto; gap: 14px; align-items: baseline; padding: 16px 8px 16px 0">
+              <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: {{ accent }}">04</span>
+              <span style="font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Responsive Website Design</span>
+              <span class="svc-mark" aria-hidden="true"></span>
+            </summary>
+            <p style="margin: 0; padding: 0 8px 18px 60px; font-size: 16px; line-height: 1.6; color: rgba(20,18,32,0.84); max-width: 58ch">One website that stays easy to use on phones, tablets and desktops. Menus, buttons and forms are sized for thumbs rather than shrunk from a desktop screen &#8212; most of your visitors will be on phones.</p>
+          </details>
+          <details class="svc" style="border-bottom: 1px solid rgba(20,18,32,0.16); transition: background 140ms ease" style-hover="background:rgba(255,255,255,0.4)">
+            <summary style="display: grid; grid-template-columns: 46px 1fr auto; gap: 14px; align-items: baseline; padding: 16px 8px 16px 0">
+              <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: {{ accent }}">05</span>
+              <span style="font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Custom Website Development</span>
+              <span class="svc-mark" aria-hidden="true"></span>
+            </summary>
+            <p style="margin: 0; padding: 0 8px 18px 60px; font-size: 16px; line-height: 1.6; color: rgba(20,18,32,0.84); max-width: 58ch">A site coded specifically for your needs when ready-made setups don&#8217;t fit &#8212; including lean static builds for sites that rarely change and need to load instantly.</p>
+          </details>
+          <details class="svc" style="border-bottom: 1px solid rgba(20,18,32,0.16); transition: background 140ms ease" style-hover="background:rgba(255,255,255,0.4)">
+            <summary style="display: grid; grid-template-columns: 46px 1fr auto; gap: 14px; align-items: baseline; padding: 16px 8px 16px 0">
+              <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: {{ accent }}">06</span>
+              <span style="font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">CMS-Based Websites</span>
+              <span class="svc-mark" aria-hidden="true"></span>
+            </summary>
+            <p style="margin: 0; padding: 0 8px 18px 60px; font-size: 16px; line-height: 1.6; color: rgba(20,18,32,0.84); max-width: 58ch">Dynamic sites built on a content system with an admin panel, so your team adds pages, changes prices and publishes updates without calling a developer. The platform comparison further down this page shows when this is the right choice.</p>
+          </details>
+          <details class="svc" style="border-bottom: 1px solid rgba(20,18,32,0.16); transition: background 140ms ease" style-hover="background:rgba(255,255,255,0.4)">
+            <summary style="display: grid; grid-template-columns: 46px 1fr auto; gap: 14px; align-items: baseline; padding: 16px 8px 16px 0">
+              <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: {{ accent }}">07</span>
+              <span style="font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Website Redesign &amp; Revamp</span>
+              <span class="svc-mark" aria-hidden="true"></span>
+            </summary>
+            <p style="margin: 0; padding: 0 8px 18px 60px; font-size: 16px; line-height: 1.6; color: rgba(20,18,32,0.84); max-width: 58ch">Refreshing an existing site&#8217;s design and content without losing what already works &#8212; your search rankings included. If the foundations are too old to be worth fixing, we tell you before you spend.</p>
+          </details>
+          <details class="svc" style="border-bottom: 1px solid rgba(20,18,32,0.16); transition: background 140ms ease" style-hover="background:rgba(255,255,255,0.4)">
+            <summary style="display: grid; grid-template-columns: 46px 1fr auto; gap: 14px; align-items: baseline; padding: 16px 8px 16px 0">
+              <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: {{ accent }}">08</span>
+              <span style="font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Landing Page Design</span>
+              <span class="svc-mark" aria-hidden="true"></span>
+            </summary>
+            <p style="margin: 0; padding: 0 8px 18px 60px; font-size: 16px; line-height: 1.6; color: rgba(20,18,32,0.84); max-width: 58ch">Single focused pages for a campaign, a launch or an ad: one message, one action, built to load fast and make the clicks you pay for count.</p>
+          </details>
+          <details class="svc" style="border-bottom: 1px solid rgba(20,18,32,0.16); transition: background 140ms ease" style-hover="background:rgba(255,255,255,0.4)">
+            <summary style="display: grid; grid-template-columns: 46px 1fr auto; gap: 14px; align-items: baseline; padding: 16px 8px 16px 0">
+              <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: {{ accent }}">09</span>
+              <span style="font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Web Portal Development</span>
+              <span class="svc-mark" aria-hidden="true"></span>
+            </summary>
+            <p style="margin: 0; padding: 0 8px 18px 60px; font-size: 16px; line-height: 1.6; color: rgba(20,18,32,0.84); max-width: 58ch">Websites people log into &#8212; student areas, dealer portals, member dashboards &#8212; with accounts, roles and content that changes depending on who is signed in.</p>
+          </details>
+          <details class="svc" style="border-bottom: 1px solid rgba(20,18,32,0.16); transition: background 140ms ease" style-hover="background:rgba(255,255,255,0.4)">
+            <summary style="display: grid; grid-template-columns: 46px 1fr auto; gap: 14px; align-items: baseline; padding: 16px 8px 16px 0">
+              <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: {{ accent }}">10</span>
+              <span style="font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Website Planning &amp; Consultancy</span>
+              <span class="svc-mark" aria-hidden="true"></span>
+            </summary>
+            <p style="margin: 0; padding: 0 8px 18px 60px; font-size: 16px; line-height: 1.6; color: rgba(20,18,32,0.84); max-width: 58ch">The thinking before the building: which pages you actually need, what each one should say, and what the whole project should cost. Useful even if you end up building elsewhere.</p>
+          </details>
+          <details class="svc" style="border-bottom: 1px solid rgba(20,18,32,0.16); transition: background 140ms ease" style-hover="background:rgba(255,255,255,0.4)">
+            <summary style="display: grid; grid-template-columns: 46px 1fr auto; gap: 14px; align-items: baseline; padding: 16px 8px 16px 0">
+              <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: {{ accent }}">11</span>
+              <span style="font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Website Maintenance &amp; Support</span>
+              <span class="svc-mark" aria-hidden="true"></span>
+            </summary>
+            <p style="margin: 0; padding: 0 8px 18px 60px; font-size: 16px; line-height: 1.6; color: rgba(20,18,32,0.84); max-width: 58ch">Keeping the site current after launch: content updates, small fixes, and a person who answers when something breaks.</p>
+          </details>
       </div>
+      <p style="margin: 22px 0 0; font-size: 16.5px; line-height: 1.6; color: rgba(20,18,32,0.78); max-width: 78ch">All of this is available to businesses across Delhi NCR &#8212; Delhi, Noida, Gurugram, Ghaziabad, Faridabad &#8212; and, because the whole process runs remotely, to businesses anywhere in India.</p>
     </div>
   </section>
 
@@ -203,8 +244,8 @@
   <section data-screen-label="Platform comparison" style="position: relative">
     <div style="max-width: 1420px; margin: 0 auto; padding: 0 36px 68px">
       <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; flex-wrap: wrap; padding: 26px 0 22px; border-top: 1px solid #14121f">
-        <h2 style="margin: 0; font-family: Archivo, sans-serif; font-weight: 700; font-size: clamp(24px, 2.6vw, 38px); line-height: 1; letter-spacing: -0.03em">Custom-coded, CMS-based &#8212; or a builder?</h2>
-        <div style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(20,18,32,0.6)">The main decision</div>
+        <h2 style="margin: 0; font-family: Archivo, sans-serif; font-weight: 700; font-size: clamp(24px, 2.6vw, 38px); line-height: 1; letter-spacing: -0.03em">How should your website be built?</h2>
+        <div style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(20,18,32,0.6)">Three options, compared</div>
       </div>
       <div style="display: grid; grid-template-columns: {{ compCols }}; gap: 1px; border: 1px solid rgba(20,18,32,0.3)">
         <div style="background: transparent; box-shadow: 0 0 0 0.5px rgba(20,18,32,0.28); padding: 24px 24px 28px">
