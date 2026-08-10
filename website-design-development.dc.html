@@ -23,6 +23,10 @@
   @keyframes inkUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
   @keyframes fadeUp { from { opacity: 0; } to { opacity: 1; } }
   @media (max-width: 379px) { .nav-thumb { display: none !important } }
+  details.faq summary { cursor: pointer; list-style: none; display: flex; align-items: baseline; justify-content: space-between; gap: 18px; }
+  details.faq summary::-webkit-details-marker { display: none; }
+  details.faq summary::after { content: "+"; font-family: Archivo, sans-serif; font-weight: 600; font-size: 22px; color: #c2412a; flex-shrink: 0; line-height: 1; }
+  details.faq[open] summary::after { content: "\2212"; }
 </style>
 <script src="./backdrop.js"></script>
 </helmet>
@@ -85,7 +89,7 @@
       <span style="color: rgba(20,18,32,0.6)">01 of 18</span>
     </div>
     <h1 style="margin: 20px 0 0; font-family: Archivo, sans-serif; font-weight: 700; font-size: clamp(38px, 5.4vw, 84px); line-height: 0.95; letter-spacing: -0.035em; text-wrap: balance; max-width: 16ch; animation: inkUp 0.8s cubic-bezier(0.2,0.7,0.2,1) 0.1s both">Website Design &amp; Development</h1>
-    <p style="margin: 24px 0 0; max-width: 56ch; font-size: 20px; line-height: 1.55; color: rgba(20,18,32,0.86); animation: inkUp 0.8s cubic-bezier(0.2,0.7,0.2,1) 0.24s both">Your site drawn and approved as wireframes before a line of code is written &#8212; then built to match, custom-coded or CMS-based. A Delhi NCR studio working with businesses across India.</p>
+    <p style="margin: 24px 0 0; max-width: 56ch; font-size: 20px; line-height: 1.55; color: rgba(20,18,32,0.86); animation: inkUp 0.8s cubic-bezier(0.2,0.7,0.2,1) 0.24s both">We plan how your website will look and work &#8212; and you approve that plan &#8212; before anything gets built. A Delhi NCR studio building business websites for clients across India.</p>
     <div style="margin-top: 32px; display: flex; align-items: center; gap: 22px; flex-wrap: wrap; animation: fadeUp 0.8s ease 0.4s both">
       <a href="index.html#contact" style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 14px; color: #f5f3ee; background: #14121f; padding: 15px 26px; transition: background 180ms ease" style-hover="background:#c2412a">Send us the brief</a>
       <a href="index.html#disciplines" style="font-family: Archivo, sans-serif; font-weight: 500; font-size: 14px; border-bottom: 1px solid rgba(20,18,32,0.35); padding-bottom: 2px">All services</a>
@@ -160,36 +164,184 @@
     </div>
   </section>
 
-  <section data-screen-label="Approach" style="position: relative">
+  <section data-screen-label="Process" style="position: relative">
     <div style="max-width: 1420px; margin: 0 auto; padding: 0 36px 68px">
-      <div style="border-top: 1px solid #14121f; display: grid; grid-template-columns: {{ listCols }}; gap: 0 56px">
-        <div style="padding: 30px 0; border-bottom: 1px solid rgba(20,18,32,0.18)">
-          <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: {{ accent }}">01</div>
-          <h2 style="margin: 12px 0 0; font-family: Archivo, sans-serif; font-size: clamp(21px, 2.1vw, 27px); font-weight: 600; letter-spacing: -0.03em; line-height: 1.1">Drawn before it&#8217;s built</h2>
-          <p style="margin: 12px 0 0; font-size: 17px; line-height: 1.6; color: rgba(20,18,32,0.84); max-width: 42ch">Every project starts as a drawing: we map the pages your business actually needs, wireframe them, and you approve the plan before design or code begins. Scope, timeline and price are agreed on paper at this stage &#8212; so nothing is discovered halfway through the build.</p>
-        </div>        <div style="padding: 30px 0; border-bottom: 1px solid rgba(20,18,32,0.18)">
-          <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: {{ accent }}">02</div>
-          <h2 style="margin: 12px 0 0; font-family: Archivo, sans-serif; font-size: clamp(21px, 2.1vw, 27px); font-weight: 600; letter-spacing: -0.03em; line-height: 1.1">Custom-coded or CMS-based</h2>
-          <p style="margin: 12px 0 0; font-size: 17px; line-height: 1.6; color: rgba(20,18,32,0.84); max-width: 42ch">The real question is who updates the site after launch. If your team will publish and edit regularly, a CMS such as <a href="wordpress-services.dc.html" style="border-bottom: 1px solid rgba(20,18,32,0.35)">WordPress</a> makes sense. If the site changes rarely and speed matters most, a custom-coded build stays leaner. If you&#8217;re selling online, that&#8217;s <a href="ecommerce-website-development.dc.html" style="border-bottom: 1px solid rgba(20,18,32,0.35)">e-commerce development</a> &#8212; a different job we also do. We&#8217;ll recommend one and tell you why.</p>
-        </div>        <div style="padding: 30px 0; border-bottom: 1px solid rgba(20,18,32,0.18)">
-          <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: {{ accent }}">03</div>
-          <h2 style="margin: 12px 0 0; font-family: Archivo, sans-serif; font-size: clamp(21px, 2.1vw, 27px); font-weight: 600; letter-spacing: -0.03em; line-height: 1.1">Redesign or rebuild</h2>
-          <p style="margin: 12px 0 0; font-size: 17px; line-height: 1.6; color: rgba(20,18,32,0.84); max-width: 42ch">An existing site isn&#8217;t always a teardown. If the structure is sound, a redesign refreshes layout and content on what you have. If the foundations fight every change, rebuilding costs less than renovating. We audit first and show you which side your site falls on.</p>
-        </div>        <div style="padding: 30px 0; border-bottom: 1px solid rgba(20,18,32,0.18)">
-          <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: {{ accent }}">04</div>
-          <h2 style="margin: 12px 0 0; font-family: Archivo, sans-serif; font-size: clamp(21px, 2.1vw, 27px); font-weight: 600; letter-spacing: -0.03em; line-height: 1.1">Built for phones first</h2>
-          <p style="margin: 12px 0 0; font-size: 17px; line-height: 1.6; color: rgba(20,18,32,0.84); max-width: 42ch">Most of your visitors will arrive on a phone, so we design the phone view as a first-class layout, not a squeezed copy of the desktop. Menus, forms and buttons are drawn for thumbs, and every wireframe you approve shows both views.</p>
-        </div>        <div style="padding: 30px 0; border-bottom: 1px solid rgba(20,18,32,0.18)">
-          <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: {{ accent }}">05</div>
-          <h2 style="margin: 12px 0 0; font-family: Archivo, sans-serif; font-size: clamp(21px, 2.1vw, 27px); font-weight: 600; letter-spacing: -0.03em; line-height: 1.1">What you bring, what we handle</h2>
-          <p style="margin: 12px 0 0; font-size: 17px; line-height: 1.6; color: rgba(20,18,32,0.84); max-width: 42ch">You bring the business knowledge: what you sell, who buys, what makes you different. We handle structure, design and build. Words for the pages can come from you &#8212; or from our <a href="website-content.dc.html" style="border-bottom: 1px solid rgba(20,18,32,0.35)">website content</a> service if writing isn&#8217;t your job.</p>
-        </div>        <div style="padding: 30px 0; border-bottom: 1px solid rgba(20,18,32,0.18)">
-          <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: {{ accent }}">06</div>
-          <h2 style="margin: 12px 0 0; font-family: Archivo, sans-serif; font-size: clamp(21px, 2.1vw, 27px); font-weight: 600; letter-spacing: -0.03em; line-height: 1.1">From Delhi NCR, for anywhere</h2>
-          <p style="margin: 12px 0 0; font-size: 17px; line-height: 1.6; color: rgba(20,18,32,0.84); max-width: 42ch">We&#8217;re a Delhi NCR studio &#8212; registered here as WESTRA Solution &#8212; and the work is delivered remotely, so businesses anywhere in India get the same process: drawings first, one point of contact, and a site handed over with everything you need to run it.</p>
-        </div>      </div>
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; flex-wrap: wrap; padding: 26px 0 22px; border-top: 1px solid #14121f">
+        <h2 style="margin: 0; font-family: Archivo, sans-serif; font-weight: 700; font-size: clamp(24px, 2.6vw, 38px); line-height: 1; letter-spacing: -0.03em">How the work runs</h2>
+        <div style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(20,18,32,0.6)">5 stages</div>
+      </div>
+      <div style="display: grid; grid-template-columns: {{ stepCols }}; gap: 0 32px">
+        <div style="padding: 24px 0 28px; border-bottom: 1px solid rgba(20,18,32,0.18)">
+          <div style="font-family: Archivo, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; color: {{ accent }}">01</div>
+          <h3 style="margin: 12px 0 0; font-family: Archivo, sans-serif; font-size: 19px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.1; color: #14121f">Discover</h3>
+          <p style="margin: 10px 0 0; font-size: 16px; line-height: 1.55; color: rgba(20,18,32,0.84)">We start with your business, not the layout: what you sell, who buys, and what the website has to do for you. You leave this stage with a page list, a timeline and a price.</p>
+        </div>
+        <div style="padding: 24px 0 28px; border-bottom: 1px solid rgba(20,18,32,0.18)">
+          <div style="font-family: Archivo, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; color: {{ accent }}">02</div>
+          <h3 style="margin: 12px 0 0; font-family: Archivo, sans-serif; font-size: 19px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.1; color: #14121f">Design</h3>
+          <p style="margin: 10px 0 0; font-size: 16px; line-height: 1.55; color: rgba(20,18,32,0.84)">Before any code, you get a simple drawing of every page showing what goes where &#8212; designers call it a wireframe. You mark it up, we adjust, and nothing is built until you approve it.</p>
+        </div>
+        <div style="padding: 24px 0 28px; border-bottom: 1px solid rgba(20,18,32,0.18)">
+          <div style="font-family: Archivo, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; color: {{ accent }}">03</div>
+          <h3 style="margin: 12px 0 0; font-family: Archivo, sans-serif; font-size: 19px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.1; color: #14121f">Develop</h3>
+          <p style="margin: 10px 0 0; font-size: 16px; line-height: 1.55; color: rgba(20,18,32,0.84)">The approved drawings become a working website: custom-coded, or built on a content system you can edit yourself, whichever fits how you plan to run it.</p>
+        </div>
+        <div style="padding: 24px 0 28px; border-bottom: 1px solid rgba(20,18,32,0.18)">
+          <div style="font-family: Archivo, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; color: {{ accent }}">04</div>
+          <h3 style="margin: 12px 0 0; font-family: Archivo, sans-serif; font-size: 19px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.1; color: #14121f">Launch</h3>
+          <p style="margin: 10px 0 0; font-size: 16px; line-height: 1.55; color: rgba(20,18,32,0.84)">Domain, hosting and business email get set up, and the site is checked on phones, tablets and desktops before it goes live.</p>
+        </div>
+        <div style="padding: 24px 0 28px; border-bottom: 1px solid rgba(20,18,32,0.18)">
+          <div style="font-family: Archivo, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; color: {{ accent }}">05</div>
+          <h3 style="margin: 12px 0 0; font-family: Archivo, sans-serif; font-size: 19px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.1; color: #14121f">Maintain</h3>
+          <p style="margin: 10px 0 0; font-size: 16px; line-height: 1.55; color: rgba(20,18,32,0.84)">You get the keys and a proper walkthrough. Updates and fixes can stay with us or move in-house &#8212; your call, never a lock-in.</p>
+        </div>
+      </div>
     </div>
   </section>
+
+  <section data-screen-label="Platform comparison" style="position: relative">
+    <div style="max-width: 1420px; margin: 0 auto; padding: 0 36px 68px">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; flex-wrap: wrap; padding: 26px 0 22px; border-top: 1px solid #14121f">
+        <h2 style="margin: 0; font-family: Archivo, sans-serif; font-weight: 700; font-size: clamp(24px, 2.6vw, 38px); line-height: 1; letter-spacing: -0.03em">Custom-coded, CMS-based &#8212; or a builder?</h2>
+        <div style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(20,18,32,0.6)">The main decision</div>
+      </div>
+      <div style="display: grid; grid-template-columns: {{ compCols }}; gap: 1px; border: 1px solid rgba(20,18,32,0.3)">
+        <div style="background: transparent; box-shadow: 0 0 0 0.5px rgba(20,18,32,0.28); padding: 24px 24px 28px">
+          <h3 style="margin: 0; font-family: Archivo, sans-serif; font-size: clamp(19px, 1.8vw, 23px); font-weight: 600; letter-spacing: -0.025em; color: #14121f">CMS-based</h3>
+          <p style="margin: 10px 0 0; font-size: 16px; line-height: 1.55; color: rgba(20,18,32,0.84)">Built on a content system with an admin panel, so your team edits pages and adds content without touching code.</p>
+          <div style="margin-top: 14px"><div style="font-family: Archivo, sans-serif; font-size: 10.5px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(20,18,32,0.55)">Best for</div>
+          <p style="margin: 6px 0 0; font-size: 16px; line-height: 1.55; color: rgba(20,18,32,0.84)">Businesses that will publish, edit and grow the site themselves.</p></div>
+          <div style="margin-top: 14px"><div style="font-family: Archivo, sans-serif; font-size: 10.5px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(20,18,32,0.55)">Who updates it</div>
+          <p style="margin: 6px 0 0; font-size: 16px; line-height: 1.55; color: rgba(20,18,32,0.84)">You do &#8212; from an admin panel, after a walkthrough from us.</p></div>
+          <div style="margin-top: 14px"><div style="font-family: Archivo, sans-serif; font-size: 10.5px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(20,18,32,0.55)">Trade-off</div>
+          <p style="margin: 6px 0 0; font-size: 16px; line-height: 1.55; color: rgba(20,18,32,0.84)">Needs routine updates and security care. Most of our CMS builds run on <a href="wordpress-services.dc.html" style="border-bottom: 1px solid rgba(20,18,32,0.35)">WordPress</a>.</p></div>
+        </div>
+        <div style="background: transparent; box-shadow: 0 0 0 0.5px rgba(20,18,32,0.28); padding: 24px 24px 28px">
+          <h3 style="margin: 0; font-family: Archivo, sans-serif; font-size: clamp(19px, 1.8vw, 23px); font-weight: 600; letter-spacing: -0.025em; color: #14121f">Custom-coded</h3>
+          <p style="margin: 10px 0 0; font-size: 16px; line-height: 1.55; color: rgba(20,18,32,0.84)">Written specifically for your site with nothing extra loaded, which keeps it lean and quick.</p>
+          <div style="margin-top: 14px"><div style="font-family: Archivo, sans-serif; font-size: 10.5px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(20,18,32,0.55)">Best for</div>
+          <p style="margin: 6px 0 0; font-size: 16px; line-height: 1.55; color: rgba(20,18,32,0.84)">Sites that change rarely and where speed matters most.</p></div>
+          <div style="margin-top: 14px"><div style="font-family: Archivo, sans-serif; font-size: 10.5px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(20,18,32,0.55)">Who updates it</div>
+          <p style="margin: 6px 0 0; font-size: 16px; line-height: 1.55; color: rgba(20,18,32,0.84)">We do &#8212; changes go through a developer.</p></div>
+          <div style="margin-top: 14px"><div style="font-family: Archivo, sans-serif; font-size: 10.5px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(20,18,32,0.55)">Trade-off</div>
+          <p style="margin: 6px 0 0; font-size: 16px; line-height: 1.55; color: rgba(20,18,32,0.84)">Every edit is a code edit. Fine twice a year; costly twice a week.</p></div>
+        </div>
+        <div style="background: transparent; box-shadow: 0 0 0 0.5px rgba(20,18,32,0.28); padding: 24px 24px 28px">
+          <h3 style="margin: 0; font-family: Archivo, sans-serif; font-size: clamp(19px, 1.8vw, 23px); font-weight: 600; letter-spacing: -0.025em; color: #14121f">DIY builders</h3>
+          <p style="margin: 10px 0 0; font-size: 16px; line-height: 1.55; color: rgba(20,18,32,0.84)">The drag-and-drop tools you have seen advertised. Honest answer: sometimes they are enough.</p>
+          <div style="margin-top: 14px"><div style="font-family: Archivo, sans-serif; font-size: 10.5px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(20,18,32,0.55)">Best for</div>
+          <p style="margin: 6px 0 0; font-size: 16px; line-height: 1.55; color: rgba(20,18,32,0.84)">Testing an idea with a few pages before committing a budget.</p></div>
+          <div style="margin-top: 14px"><div style="font-family: Archivo, sans-serif; font-size: 10.5px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(20,18,32,0.55)">Who updates it</div>
+          <p style="margin: 6px 0 0; font-size: 16px; line-height: 1.55; color: rgba(20,18,32,0.84)">You do, inside the builder&#8217;s own editor.</p></div>
+          <div style="margin-top: 14px"><div style="font-family: Archivo, sans-serif; font-size: 10.5px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(20,18,32,0.55)">Trade-off</div>
+          <p style="margin: 6px 0 0; font-size: 16px; line-height: 1.55; color: rgba(20,18,32,0.84)">Quick to start, limiting to grow. If this is all you need right now, we will say so.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section data-screen-label="Websites we build" style="position: relative">
+    <div style="max-width: 1420px; margin: 0 auto; padding: 0 36px 68px">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; flex-wrap: wrap; padding: 26px 0 22px; border-top: 1px solid #14121f">
+        <h2 style="margin: 0; font-family: Archivo, sans-serif; font-weight: 700; font-size: clamp(24px, 2.6vw, 38px); line-height: 1; letter-spacing: -0.03em">Websites we build</h2>
+        <div style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(20,18,32,0.6)">Who this is for</div>
+      </div>
+      <div style="display: grid; grid-template-columns: {{ listCols }}; gap: 0 56px">
+          <div style="display: grid; grid-template-columns: 46px 1fr; gap: 14px; align-items: baseline; padding: 18px 8px 18px 0; border-bottom: 1px solid rgba(20,18,32,0.16)">
+            <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: {{ accent }}">01</div>
+            <div><div style="font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Local businesses &amp; services</div>
+            <p style="margin: 5px 0 0; font-size: 15.5px; line-height: 1.5; color: rgba(20,18,32,0.78)">Found on Google, clear services and prices, and easy ways to call or WhatsApp you.</p></div>
+          </div>
+          <div style="display: grid; grid-template-columns: 46px 1fr; gap: 14px; align-items: baseline; padding: 18px 8px 18px 0; border-bottom: 1px solid rgba(20,18,32,0.16)">
+            <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: {{ accent }}">02</div>
+            <div><div style="font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Professional services</div>
+            <p style="margin: 5px 0 0; font-size: 15.5px; line-height: 1.5; color: rgba(20,18,32,0.78)">CAs, lawyers, consultants: credibility a client can check, and enquiry forms that actually reach you.</p></div>
+          </div>
+          <div style="display: grid; grid-template-columns: 46px 1fr; gap: 14px; align-items: baseline; padding: 18px 8px 18px 0; border-bottom: 1px solid rgba(20,18,32,0.16)">
+            <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: {{ accent }}">03</div>
+            <div><div style="font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Schools &amp; coaching institutes</div>
+            <p style="margin: 5px 0 0; font-size: 15.5px; line-height: 1.5; color: rgba(20,18,32,0.78)">Admissions information, notices and contact details that parents can find without hunting.</p></div>
+          </div>
+          <div style="display: grid; grid-template-columns: 46px 1fr; gap: 14px; align-items: baseline; padding: 18px 8px 18px 0; border-bottom: 1px solid rgba(20,18,32,0.16)">
+            <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: {{ accent }}">04</div>
+            <div><div style="font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Clinics &amp; healthcare</div>
+            <p style="margin: 5px 0 0; font-size: 15.5px; line-height: 1.5; color: rgba(20,18,32,0.78)">Doctors, timings, directions and appointment requests &#8212; readable on a phone, in a hurry.</p></div>
+          </div>
+          <div style="display: grid; grid-template-columns: 46px 1fr; gap: 14px; align-items: baseline; padding: 18px 8px 18px 0; border-bottom: 1px solid rgba(20,18,32,0.16)">
+            <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: {{ accent }}">05</div>
+            <div><div style="font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Corporate &amp; manufacturing</div>
+            <p style="margin: 5px 0 0; font-size: 15.5px; line-height: 1.5; color: rgba(20,18,32,0.78)">Product ranges, certifications and dealer enquiries presented in a usable order.</p></div>
+          </div>
+          <div style="display: grid; grid-template-columns: 46px 1fr; gap: 14px; align-items: baseline; padding: 18px 8px 18px 0; border-bottom: 1px solid rgba(20,18,32,0.16)">
+            <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: {{ accent }}">06</div>
+            <div><div style="font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">New businesses</div>
+            <p style="margin: 5px 0 0; font-size: 15.5px; line-height: 1.5; color: rgba(20,18,32,0.78)">A first website sized to a first budget, planned so it can grow instead of being rebuilt.</p></div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Decisions" style="position: relative">
+    <div style="max-width: 1420px; margin: 0 auto; padding: 0 36px 68px">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; flex-wrap: wrap; padding: 26px 0 22px; border-top: 1px solid #14121f">
+        <h2 style="margin: 0; font-family: Archivo, sans-serif; font-weight: 700; font-size: clamp(24px, 2.6vw, 38px); line-height: 1; letter-spacing: -0.03em">Decisions worth making early</h2>
+        <div style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(20,18,32,0.6)">Before you brief anyone</div>
+      </div>
+      <div style="display: grid; grid-template-columns: {{ listCols }}; gap: 0 56px">
+        <div style="padding: 30px 0; border-bottom: 1px solid rgba(20,18,32,0.18)">
+          <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: {{ accent }}">01</div>
+          <h3 style="margin: 12px 0 0; font-family: Archivo, sans-serif; font-size: clamp(21px, 2.1vw, 27px); font-weight: 600; letter-spacing: -0.03em; line-height: 1.1">Redesign or rebuild</h3>
+          <p style="margin: 12px 0 0; font-size: 17px; line-height: 1.6; color: rgba(20,18,32,0.84); max-width: 42ch">An existing site isn&#8217;t always a teardown. If the structure is sound, a redesign refreshes layout and content on what you have. If the foundations fight every change, rebuilding costs less than renovating. We audit first and show you which side your site falls on.</p>
+        </div>
+        <div style="padding: 30px 0; border-bottom: 1px solid rgba(20,18,32,0.18)">
+          <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: {{ accent }}">02</div>
+          <h3 style="margin: 12px 0 0; font-family: Archivo, sans-serif; font-size: clamp(21px, 2.1vw, 27px); font-weight: 600; letter-spacing: -0.03em; line-height: 1.1">Built for phones first</h3>
+          <p style="margin: 12px 0 0; font-size: 17px; line-height: 1.6; color: rgba(20,18,32,0.84); max-width: 42ch">Most of your visitors will arrive on a phone, so we design the phone view as a first-class layout, not a squeezed copy of the desktop. Menus, forms and buttons are drawn for thumbs, and every page plan you approve shows both views.</p>
+        </div>
+        <div style="padding: 30px 0; border-bottom: 1px solid rgba(20,18,32,0.18)">
+          <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: {{ accent }}">03</div>
+          <h3 style="margin: 12px 0 0; font-family: Archivo, sans-serif; font-size: clamp(21px, 2.1vw, 27px); font-weight: 600; letter-spacing: -0.03em; line-height: 1.1">What you bring, what we handle</h3>
+          <p style="margin: 12px 0 0; font-size: 17px; line-height: 1.6; color: rgba(20,18,32,0.84); max-width: 42ch">You bring the business knowledge: what you sell, who buys, what makes you different. We handle structure, design and build. Words for the pages can come from you &#8212; or from our <a href="website-content.dc.html" style="border-bottom: 1px solid rgba(20,18,32,0.35)">website content</a> service if writing isn&#8217;t your job.</p>
+        </div>
+        <div style="padding: 30px 0; border-bottom: 1px solid rgba(20,18,32,0.18)">
+          <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: {{ accent }}">04</div>
+          <h3 style="margin: 12px 0 0; font-family: Archivo, sans-serif; font-size: clamp(21px, 2.1vw, 27px); font-weight: 600; letter-spacing: -0.03em; line-height: 1.1">What affects the price</h3>
+          <p style="margin: 12px 0 0; font-size: 17px; line-height: 1.6; color: rgba(20,18,32,0.84); max-width: 42ch">Two websites can differ in cost for reasons you can check yourself: how many pages carry real content, whether the design is drawn fresh or adapted, whether you need help with writing, and what the site has to connect to. We scope first, then quote one fixed price you approve before the build starts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="FAQ" style="position: relative">
+    <div style="max-width: 1420px; margin: 0 auto; padding: 0 36px 76px">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; flex-wrap: wrap; padding: 26px 0 22px; border-top: 1px solid #14121f">
+        <h2 style="margin: 0; font-family: Archivo, sans-serif; font-weight: 700; font-size: clamp(24px, 2.6vw, 38px); line-height: 1; letter-spacing: -0.03em">Questions owners ask us</h2>
+        <div style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(20,18,32,0.6)">Before you call</div>
+      </div>
+      <div>
+        <details class="faq" style="border-bottom: 1px solid rgba(20,18,32,0.18)">
+          <summary style="padding: 20px 0; font-family: Archivo, sans-serif; font-size: 18px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">How much does a website cost in India?</summary>
+          <p style="margin: 0; padding: 0 0 22px; font-size: 16.5px; line-height: 1.6; color: rgba(20,18,32,0.84); max-width: 68ch">There is no honest single number &#8212; the market runs from a few thousand rupees for a template to several lakhs for large custom platforms. What moves your price: how many pages carry real content, custom design versus adapted, writing help, and integrations. We give you the full figure after a short scoping call, before anything is built.</p>
+        </details>
+        <details class="faq" style="border-bottom: 1px solid rgba(20,18,32,0.18)">
+          <summary style="padding: 20px 0; font-family: Archivo, sans-serif; font-size: 18px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">How long does a website take?</summary>
+          <p style="margin: 0; padding: 0 0 22px; font-size: 16.5px; line-height: 1.6; color: rgba(20,18,32,0.84); max-width: 68ch">The plan you approve carries the dates, so you are never guessing. In practice the schedule depends less on the build and more on how ready your content is &#8212; text and photos are where most projects lose time. If a launch date matters, say so in the first call and we plan backwards from it.</p>
+        </details>
+        <details class="faq" style="border-bottom: 1px solid rgba(20,18,32,0.18)">
+          <summary style="padding: 20px 0; font-family: Archivo, sans-serif; font-size: 18px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Will I be able to update the website myself?</summary>
+          <p style="margin: 0; padding: 0 0 22px; font-size: 16.5px; line-height: 1.6; color: rgba(20,18,32,0.84); max-width: 68ch">On a CMS build, yes: you get an admin login and a walkthrough, and everyday edits need no developer. Custom-coded sites trade that for speed &#8212; changes go through us. The comparison above shows which fits how you work.</p>
+        </details>
+        <details class="faq" style="border-bottom: 1px solid rgba(20,18,32,0.18)">
+          <summary style="padding: 20px 0; font-family: Archivo, sans-serif; font-size: 18px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Do you only work with businesses in Delhi NCR?</summary>
+          <p style="margin: 0; padding: 0 0 22px; font-size: 16.5px; line-height: 1.6; color: rgba(20,18,32,0.84); max-width: 68ch">No. We are registered in Delhi NCR as WESTRA Solution, and the whole process runs remotely, first call to launch, so businesses anywhere in India get the same service.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+
   <section data-screen-label="Neighbours" style="position: relative">
     <div style="max-width: 1420px; margin: 0 auto; padding: 0 36px 76px">
       <div style="display: grid; grid-template-columns: {{ navCols }}; gap: 1px; background: transparent; border: 1px solid rgba(20,18,32,0.3)">
@@ -260,6 +412,8 @@ class Component extends DCLogic {
       heroCols: n ? '1fr' : '1.15fr 0.85fr',
       heroGap: n ? '28px' : '56px',
       listCols: n ? '1fr' : '1fr 1fr',
+      stepCols: n ? '1fr' : 'repeat(5, 1fr)',
+      compCols: n ? '1fr' : 'repeat(3, 1fr)',
       navCols: n ? '1fr' : '1fr 1fr',
       ctaCols: n ? '1fr' : '1.1fr 0.9fr',
       gap: n ? '32px' : '64px',
