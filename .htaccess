@@ -1,3 +1,10 @@
+# Canonical host: redirect www to apex (301), any domain
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+</IfModule>
+
 # WebsiteDesignArt - caching and security headers (Apache hosts)
 # Note: intentionally conservative on script caching - support.js is the page
 # runtime and this site deploys by manual file upload with unversioned URLs,
