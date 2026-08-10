@@ -241,6 +241,18 @@ Do not add content merely to make the page longer.
 
 Every section must have a clear purpose.
 
+GLOBAL READING PRIORITY
+
+The writing priority for every page is:
+
+UNDERSTANDING → INTEREST → USEFULNESS → SEO
+
+not:
+
+KEYWORDS → TECHNICAL TERMS → SEO
+
+A keyword is a research signal, not a sentence that must be inserted literally. The research framework below decides WHAT the page covers; the reader decides HOW it must be written.
+
 
 ==================================================
 PHASE 1: LIVE SERP RESEARCH
@@ -714,6 +726,16 @@ Do not create near-identical pages for:
 
 unless each page can provide materially different information and serves a distinct search intent.
 
+INDUSTRY TERMS IN CONTENT
+
+When an industry topic is genuinely relevant on a page, explain the actual business need rather than inserting keyword strings.
+
+For example:
+
+"A school website needs more than attractive pages. Parents need to find admissions information, notices, academic details and contact information quickly."
+
+is better than inserting "school website design, school website development, school web design...". Do not insert industry terms merely for keyword coverage.
+
 --------------------------------------------------
 KEYWORD-TO-CONTENT MAPPING
 --------------------------------------------------
@@ -1156,6 +1178,60 @@ Natural rhythm is more important than an artificial sentence-length rule.
 
 Do not make the writing sound childish.
 
+CUSTOMER LANGUAGE FIRST
+
+Write for the target customer's understanding, not for technical terminology.
+
+Before using any technical term, ask: "Would the target customer naturally understand this term?"
+
+If uncertain, explain the concept in normal business language first. The technical term may then be introduced naturally if useful.
+
+Use this pattern:
+
+CONCEPT → BENEFIT → TECHNICAL TERM, IF USEFUL
+
+Do not write for developers when the target customer is a business owner.
+
+CONCEPT FIRST → TECHNICAL TERM SECOND
+
+Do not remove useful technical terminology completely. Use technical terms when they genuinely help understanding, comparison, decision-making, or search relevance — but never make the customer understand a term before understanding the benefit.
+
+Example — instead of:
+
+"Your website is wireframed before development."
+
+Prefer:
+
+"We first plan how your website will look and work, so you can review the structure before development begins."
+
+Then, if useful: "This visual plan is often called a wireframe."
+
+Example — instead of:
+
+"Responsive breakpoints ensure optimal rendering."
+
+Write:
+
+"Your website needs to work properly on phones, tablets and desktops. We plan the layouts for different screen sizes so the important content remains easy to use."
+
+EXPLAIN BEFORE NAMING
+
+When a technical concept matters, follow this pattern:
+
+1. Explain what it does.
+2. Explain why the customer should care.
+3. Introduce the technical name if useful.
+
+BUSINESS OWNER READABILITY TEST
+
+Before finalizing each section, ask: "Could a normal small or medium business owner understand this section without asking a developer to explain it?"
+
+If NO: simplify the sentence, explain the concept, remove unnecessary terminology, use a practical example, or explain the business consequence. Do not dumb down the content — make it understandable.
+
+READ-ALOUD TEST
+
+Read important copy mentally as if a person were saying it to a customer. If a sentence sounds like a technical manual, an SEO article, an AI-generated service description, a corporate brochure, or a keyword insertion exercise — rewrite it. The final copy should sound like an experienced person explaining the service to another person.
+
 
 --------------------------------------------------
 OPENING / DIRECT ANSWER
@@ -1182,6 +1258,30 @@ Do not begin with:
 
 Start with the customer's actual problem or need.
 
+OPEN WITH SOMETHING THE CUSTOMER CARES ABOUT
+
+Do not automatically begin sections with service definitions, keyword variations, company introductions, technical terminology, generic agency claims, or lists of features.
+
+Whenever appropriate, begin a section with one of:
+
+- a real customer problem
+- a common business situation
+- an important decision
+- a useful observation
+- a practical consequence
+- a question the customer is likely considering
+- a clear explanation of why something matters
+
+The opening should make the reader think: "Yes, this is exactly what I need to know."
+
+HERO SECTION RULE
+
+The hero is especially important — the visitor should understand the service within a few seconds.
+
+The hero should answer: WHAT IS THIS? WHY SHOULD I CARE? WHAT IS DIFFERENT ABOUT THE APPROACH?
+
+Avoid technical language in the hero unless the target audience clearly understands it. Do not overload the hero with keyword variations, service lists, technical terminology, multiple claims, or location lists. The hero should be concise, clear and interesting.
+
 
 --------------------------------------------------
 LOCAL RELEVANCE
@@ -1196,6 +1296,18 @@ Do not place the city name in every heading.
 Do not create artificial local references.
 
 The page should sound relevant to someone actually searching for the service in that location.
+
+Local SEO must never turn paragraphs into lists of places.
+
+Do not write:
+
+"We provide website design services in Delhi, Noida, Gurugram, Ghaziabad, Faridabad, Greater Noida..."
+
+Instead, when local relevance genuinely helps:
+
+"Based in Delhi NCR, we work with businesses across the region and take projects remotely from other parts of India."
+
+Mention specific areas only when they contribute useful context. Local terms must serve the reader, not the keyword strategy.
 
 
 --------------------------------------------------
@@ -1225,6 +1337,66 @@ Focus on practical information such as:
 - Service limitations where relevant
 
 Do not invent information merely to create "information gain."
+
+INFORMATION GAIN MUST NOT MEAN TECHNICAL COMPLEXITY
+
+Useful original information means explaining decisions competitors skip, what the customer must prepare, what affects cost, when a simpler solution is sufficient, what happens before development and after launch, and common mistakes — expressed in plain business language. Prioritize practical knowledge over technical vocabulary.
+
+EVERY SECTION MUST EARN ITS PLACE
+
+Before writing a section, determine: "What will the customer understand after reading this?" If there is no useful answer, remove the section. Do not add content because a competitor has it, a keyword exists, the page needs more words, or an SEO checklist contains the topic.
+
+MAKE THE CONTENT INTERESTING TO READ
+
+The page should not feel like a catalogue of SEO phrases. Avoid repetitive structures such as "We provide...", "We offer...", "Our service includes...", "We help businesses...", "We specialize in...". Do not repeat the same claim in different wording to increase length.
+
+Instead, explain real decisions and consequences. For example, instead of:
+
+"We provide custom e-commerce website development."
+
+Prefer:
+
+"A small catalogue and a large online store do not necessarily need the same setup. The right approach depends on how many products you sell, how often they change, how customers pay, and who will manage the store after launch."
+
+
+--------------------------------------------------
+CONTENT DEPTH & COMPLETENESS
+--------------------------------------------------
+
+There is no arbitrary word-count target.
+
+However, "no fixed word count" does NOT mean that a short page is automatically acceptable.
+
+Before finalizing the page, evaluate whether the content provides enough useful depth to satisfy the searcher's actual commercial intent.
+
+Where relevant, the page should meaningfully address:
+
+- What the service includes
+- Who the service is suitable for
+- Important decisions the customer may need to make
+- How the service works
+- What the customer needs to prepare
+- What affects cost or scope
+- Common mistakes or risks
+- Important implementation considerations
+- Relevant customer questions
+- What happens after the project
+- Relevant local considerations
+- Relevant limitations or boundaries
+
+Do not add these topics mechanically.
+
+Only include topics supported by research, business capability, and the actual service.
+
+The page is NOT complete merely because every planned heading contains some text.
+
+Before completion, ask:
+
+"Would a genuine customer have enough useful information here to understand the service and make a sensible decision about contacting this business?"
+
+If NO, expand the relevant sections with useful information.
+
+Do not add filler, keyword repetition, generic explanations, or unnecessary paragraphs merely to increase length.
 
 
 --------------------------------------------------
@@ -1291,6 +1463,31 @@ Use questions observed during research where appropriate.
 Do not manufacture questions simply to add an FAQ section.
 
 Do not repeat answers already given elsewhere without adding value.
+
+FAQ DEPTH CHECK
+
+Do not automatically omit the FAQ section.
+
+After placing important questions into the main content, review the remaining researched questions.
+
+If useful secondary questions remain that:
+
+- Are relevant to the service
+- Are supported by research or reliable customer evidence
+- Are not already answered adequately in the main content
+- Would help the visitor before contacting the business
+
+include a concise FAQ section.
+
+When an FAQ section is justified, normally use approximately 3 to 6 useful questions.
+
+Use fewer when fewer genuinely useful questions exist.
+
+If no useful secondary questions remain, omit the FAQ section and record the reason in the editorial review.
+
+Never manufacture questions merely to reach an FAQ count.
+
+FAQ content exists for the visitor, not for FAQ rich-result eligibility.
 
 
 --------------------------------------------------
@@ -1387,19 +1584,61 @@ For the current page content:
 BANNED LANGUAGE
 ==================================================
 
-Do not use:
+Banned vocabulary is tiered (compiled from GPTZero research, Wikipedia's "Signs of AI writing", and editing-community data; full dictionary: `.claude/skills/humanize-writing/references/ai-patterns-dictionary.md`).
 
-delve
-unlock
-tapestry
-moreover
-in conclusion
-today's digital age
-unleash
-robust
-seamless
-testament
-navigate
+TIER 1 — never use (strongest AI signals); replace with the human alternative:
+
+| AI word | Use instead |
+|---|---|
+| delve | dig into, look at |
+| tapestry | mix, combination |
+| landscape | space, field |
+| pivotal | important, key |
+| underscore | show, highlight |
+| testament | proof, sign |
+| intricate / intricacies | complicated, detailed |
+| meticulous(ly) | careful, thorough |
+| nuanced | subtle |
+| multifaceted | complex |
+| embark | start |
+| spearhead | lead |
+| bolster | support, strengthen |
+| garner | get, earn |
+| interplay | relationship |
+| realm | area, world |
+| labyrinth | maze |
+| symphony | mix, blend |
+| unlock | (state the actual benefit) |
+| unleash | (state the actual benefit) |
+
+TIER 2 — humans use them, AI overuses them; maximum once each, and only where truly natural:
+
+| AI word | Use instead |
+|---|---|
+| crucial | important, key |
+| vibrant | lively |
+| foster | encourage, grow |
+| enhance | improve |
+| leverage | use |
+| navigate | deal with, handle |
+| resonate | connect, land |
+| illuminate | clarify, show |
+| showcase | show |
+| enduring | lasting |
+| robust | strong, solid |
+| holistic | complete, full-picture |
+| comprehensive | full, thorough |
+| innovative | new, fresh |
+| dynamic | active, changing |
+| seamless(ly) | smooth, easy |
+| cutting-edge | latest |
+| game-changer | breakthrough |
+
+TIER 3 — transition words; fine alone, but never more than 2 formal transitions in the whole piece, never clustered:
+
+Furthermore / Moreover / Additionally → Also, And, Plus. Consequently / Hence / Thus → So. Nevertheless / Nonetheless → Still, But. Subsequently → Then. "In conclusion" / "In summary" → just conclude, don't announce it. "It's worth noting that" / "It's important to understand that" → delete and state the thing.
+
+Also banned: "today's digital age" and all its variants.
 
 Also avoid:
 
@@ -1558,7 +1797,137 @@ Check:
 19. Does the page naturally lead toward the future footer CTA?
 20. Has any unsupported offer or promise been introduced?
 
+HUMAN READING TEST
+
+Additionally, review the entire page as a normal customer:
+
+21. Can I understand the service without technical knowledge?
+22. Do I understand why I might need it?
+23. Does the page answer practical questions I would have before contacting the company?
+24. Are technical terms explained before or immediately after they are used?
+25. Does each section give me useful information?
+26. Does anything feel like keyword stuffing or generic AI-generated agency copy?
+27. Does the page make me want to continue reading?
+
 Rewrite anything that fails.
+
+FINAL KEYWORD-TO-CONTENT COVERAGE CHECK
+
+Keyword research must influence the actual page content, not only the research report.
+
+For the highest-priority approved keyword/topic clusters, verify that each has one of the following outcomes:
+
+- Meaningfully covered on this page
+- Naturally represented through related language
+- Assigned to an internal link
+- Assigned to another existing page
+- Classified as a future-page opportunity
+- Explicitly excluded with a reason
+
+Do not require every keyword to appear as an exact phrase.
+
+Do not report a keyword as "covered" merely because the exact phrase appears once.
+
+Coverage means that the underlying search need or topic has been meaningfully addressed.
+
+The final page should demonstrate appropriate coverage across relevant:
+
+- Head/broad topics
+- Commercial supporting topics
+- Service-specific mid-tail topics
+- Long-tail opportunities
+- Low-volume/high-intent opportunities
+- Industry/customer-type opportunities
+- Local commercial opportunities
+- Semantic/entity topics
+
+Do not force a topic onto the page when it belongs to another page, has different search intent, is unsupported by the business, or would make the writing unnatural.
+
+--------------------------------------------------
+HUMAN EDITORIAL AUDIT
+--------------------------------------------------
+
+Before finalizing the page, read the content as an experienced human editor.
+
+Do not try to make the content appear "less AI" through artificial imperfections.
+
+Do not add fake opinions, fake personal experiences, deliberate grammar mistakes, slang, typos, or invented personality.
+
+Instead, identify and revise genuine writing patterns that make the page feel formulaic or machine-produced.
+
+Check for:
+
+- Repeated sentence structures
+- Repeated paragraph lengths or patterns
+- Repeated openings such as "We provide", "We offer", or "Our..."
+- Generic agency language
+- Promotional claims without evidence
+- Unnecessary adjectives
+- Abstract or vague statements
+- Excessive technical terminology
+- Repetitive keyword phrasing
+- Mechanical keyword insertion
+- Predictable three-item or three-step structures
+- Repetitive transitions
+- Formulaic introductions
+- Formulaic conclusions
+- Unnecessary "not X, but Y" constructions
+- Excessive use of rhetorical questions
+- Overuse of em dashes or other punctuation patterns
+- Sentences that sound polished but communicate little
+- Sections that repeat information already explained elsewhere
+
+Preserve:
+
+- Verified facts
+- Search intent
+- Keyword/topic ownership
+- Useful technical terminology
+- Business-specific information
+- Local relevance
+- Internal-link purpose
+- The page's intended structure
+- The actual meaning of the content
+
+Rewrite only where the change improves naturalness, clarity, usefulness, or reader engagement.
+
+Do not deliberately introduce mistakes or awkwardness to make the writing appear human.
+
+The goal is genuinely good human-readable writing, not AI-detector manipulation.
+
+HUMANIZATION QUALITY CHECKLIST
+
+Run before returning any final content (adapted for this project from lguz/humanize-writing-skill, MIT):
+
+- [ ] Zero Tier 1 banned words remain
+- [ ] Tier 2 words appear max once each, and only where truly natural
+- [ ] No more than 2 formal transition words in the entire piece
+- [ ] Zero parallel negation structures ("Not X, but Y")
+- [ ] No tricolons (groups of three) used as filler; a genuine three-part fact is allowed
+- [ ] Em dashes match the site's established voice — used deliberately, never several in one paragraph
+- [ ] No rhetorical question + answer combos as transitions (headings phrased as real customer questions are allowed)
+- [ ] No mirror structures (consecutive sentences with identical shapes)
+- [ ] No dramatic reveals or theatrical setups ("Here's the thing:", "The result?")
+- [ ] Not every paragraph ends with a tidy bow — some just make their point and stop
+- [ ] Sentence length varies noticeably (mix of short, medium, long)
+- [ ] The business's honest position is visible somewhere (e.g., when a simpler or cheaper option is genuinely enough)
+- [ ] No inflation of importance ("pivotal," "crucial," "testament")
+- [ ] No secondary convergence (the same replacement pattern repeated everywhere)
+- [ ] Specific, concrete phrasing preferred over generic ("sized to the number of products you actually carry", not "tailored solutions")
+- [ ] Reads like an experienced person explaining the service, not a polished essay
+
+Project constraint on "human texture": specificity and rhythm only — never invented opinions, personal anecdotes, or fake personality (see anti-fabrication rules).
+
+SOCIAL MEDIA / LINKEDIN CONTENT RULES
+
+These apply ONLY when this skill is used to write social posts (e.g., Social Media Services deliverables) — never to service pages:
+
+- Lead with the most interesting line — the hook, not setup or context.
+- Keep sentences under ~20 words on average; posts are read on phones.
+- Use line breaks liberally; one thought per line works well.
+- Write like telling a story to a coworker, not writing an essay.
+- No "thought leadership" framing ("I learned...", "key takeaway"). State what happened and what the business's view is — using only verified facts.
+- End with something real rather than a neat lesson; do not fabricate vulnerability, experiences, or outcomes to seem authentic.
 
 
 ==================================================
@@ -1671,3 +2040,10 @@ The final page is successful only if:
 - No website files are modified as part of this task.
 - The final page is supported by both external search evidence and verified internal business capabilities.
 - The final page contains no unsupported service, feature, offer, credential, result, or differentiator.
+- A non-technical business owner can understand every section without outside help (Business Owner Readability Test passed).
+- Technical terms are introduced concept-first and explained where used.
+- The page passes the Human Reading Test in the Editorial Review.
+- Readability was achieved without sacrificing search relevance: the objective is SEARCH INTENT + USEFUL INFORMATION + NATURAL LANGUAGE + CLEAR CUSTOMER BENEFIT + VERIFIED BUSINESS EVIDENCE + APPROPRIATE KEYWORD COVERAGE — never content that sounds like an SEO document.
+- The page has sufficient useful depth for its search intent; it is not considered complete merely because all planned sections contain text.
+- Important approved keyword/topic clusters are meaningfully covered, naturally represented, internally linked, assigned to another page, classified as future opportunities, or explicitly excluded with a reason.
+- If useful researched secondary questions remain after main-content question placement, an FAQ section is included; otherwise the editorial review records why FAQ was omitted.
