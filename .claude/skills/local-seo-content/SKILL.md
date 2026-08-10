@@ -334,39 +334,69 @@ Use the actual SERP as evidence.
 
 
 --------------------------------------------------
-3. COMPETITOR ANALYSIS
+3. COMPETITOR ANALYSIS & REVERSE-ENGINEERING
 --------------------------------------------------
 
 Analyze up to the top 3 genuinely relevant competitors or ranking pages.
 
 Do not assume that every result is a direct competitor.
 
-For each relevant result, record:
+Do not copy competitor wording or reproduce competitor content.
+
+For each relevant ranking page, evaluate:
 
 - Business/page name
 - URL
 - Page type
 - Main topic
 - Main service offered
+- Search intent coverage
+- Page structure
+- Content depth
+- Service depth
+- Industry coverage
+- Local coverage
 - Important content covered
-- Useful trust signals
-- Local relevance
 - Service details
 - Pricing information if publicly shown
-- Process information
-- FAQs if present
+- Pricing transparency if publicly available
+- Process information and process explanation
+- FAQs
+- Portfolio evidence
+- Case studies
+- Testimonials/reviews
+- Trust signals
+- Internal linking
+- Visual evidence
+- Original information
 - Major strengths
 - Major weaknesses
 - Missing information
+- Obvious content gaps
+- Weak or generic claims
+- Competitive opportunities
 
 Do not claim that a competitor ranks because of one specific factor unless that can actually be established.
 
-Do not copy competitor wording.
+Do not infer a ranking cause from correlation.
 
-Do not reproduce competitor content.
+Do not conclude that a page ranks because it has:
+- More words
+- More headings
+- More keywords
+- More exact matches
 
-The purpose is to understand the search landscape and identify opportunities for better information.
+unless reliable evidence supports the conclusion.
 
+The purpose is to understand the search landscape and identify opportunities for better, more useful information.
+
+Determine:
+
+1. What ranking pages satisfy well.
+2. What they fail to answer.
+3. What verified business evidence can provide better.
+4. What information can be made more useful.
+5. What topics should remain outside this page.
 
 --------------------------------------------------
 4. CONTENT OPPORTUNITY
@@ -394,22 +424,56 @@ Do not add information simply to make the page longer.
 
 
 --------------------------------------------------
-5. PEOPLE ALSO ASK
+COMPETITIVE OPPORTUNITY TEST
 --------------------------------------------------
 
-If live Google results expose People Also Ask questions, record 2 to 5 relevant questions.
+A proposed content opportunity is valid only when:
 
-Do not invent PAA questions.
+- It addresses real search intent.
+- It is supported by evidence.
+- It is relevant to the target customer.
+- The business can genuinely provide it.
+- The page can explain it materially better or more usefully.
+- It does not simply duplicate another page.
+- It does not require fabricated claims.
 
-If PAA is not visible or cannot be reliably observed:
+Do not define the opportunity as "write more than competitors."
 
-PAA NOT VERIFIED.
+5. QUESTIONS & RELATED SEARCHES
 
-You may identify closely related customer questions from reliable search evidence, but clearly label them as inferred rather than observed PAA.
+If live Google results expose People Also Ask questions, Related Searches at the bottom of the SERP, or Search Suggestions/Autosuggest, record 2 to 5 relevant questions.
 
+Use only questions actually observed in the available search results.
+
+Do not invent questions.
+
+If PAA, Related Searches, or Search Suggestions are unavailable in the visible SERP output, continue question research using relevant ranking-page H2/H3 headings, competitor FAQs, search-intent evidence, and clearly identifiable customer objections.
+
+Label these as inferred or competitor-derived rather than observed Google SERP questions.
+
+If no reliable question evidence can be established, report:
+QUESTIONS NOT OBSERVED OR RELIABLY INFERRED.
+
+Do not invent questions.
 
 --------------------------------------------------
 6. RELATED SEARCH TOPICS
+
+TOPICAL ENTITY RELATIONSHIPS
+
+Extract important entities, concepts, and service terminology that commonly occur in authoritative results for the topic.
+
+Use these as a topical completeness check, not as a keyword checklist.
+
+For each important entity or concept, determine:
+- Whether it is genuinely relevant to the service
+- Whether it is already naturally covered
+- Whether it should be added to the main content
+- Whether it belongs on another page
+- Whether it should not be mentioned
+
+Do not force technical terms into the copy merely because competitors use them.
+
 --------------------------------------------------
 
 Identify useful related search topics, entities, services, questions, and concepts that appear relevant to the target intent.
@@ -420,7 +484,24 @@ Group related topics by meaning.
 
 
 --------------------------------------------------
-7. KEYWORD STRATEGY
+7. KEYWORD INTELLIGENCE & MAPPING
+
+ZERO-VOLUME / HYPER-LOCAL SIGNALS
+
+A keyword with zero, unavailable, or unverified measured volume must not automatically be treated as worthless.
+
+Evaluate hyper-local or niche queries using:
+- Commercial intent
+- Geographic specificity
+- SERP evidence
+- Customer relevance
+- Competition
+- Plausibility as a real-world search
+
+A query may be classified as a HIGH-INTENT NICHE or HYPER-LOCAL OPPORTUNITY when the evidence supports it, without claiming measurable search demand.
+
+Never convert zero or unavailable volume into an invented numeric estimate.
+
 --------------------------------------------------
 
 Identify:
@@ -446,44 +527,347 @@ Use natural language and topic relationships.
 Keyword placement is subordinate to readability and user intent.
 
 
+
+Do not treat keyword research as a short list of phrases.
+
+Build a keyword opportunity map covering the full search landscape for the service.
+
+Research, where relevant:
+
+A. HEAD / BROAD TERMS
+- Broad service terms
+- Broad commercial terms
+- General service variants
+
+B. LOCAL COMMERCIAL TERMS
+- Service + target city
+- Service + target region
+- Company/provider + target city
+- Service + nearby commercially relevant locations
+
+C. SERVICE-SPECIFIC MID-TAIL TERMS
+- Specific service variants
+- Problem-specific service queries
+- Customer-type service queries
+
+D. LONG-TAIL TERMS
+- Specific commercial queries
+- Question-based commercial queries
+- Problem + service queries
+- Customer type + service queries
+- Location + service combinations
+
+E. LOW-VOLUME / LOWER-COMPETITION OPPORTUNITIES
+Actively search for specific, niche, and lower-demand queries that may have less competition.
+
+Examples may include:
+- Planning-related searches
+- Consultation-related searches
+- Specific implementation needs
+- Narrow service variants
+- Specific customer problems
+
+Do not assume that a low-volume term is valuable.
+Evaluate relevance, intent, competition, and business fit.
+
+F. INDUSTRY / CUSTOMER-TYPE TERMS
+Research relevant industry-specific searches when the business genuinely serves those industries.
+
+Examples may include:
+- School website design
+- Clinic website design
+- Doctor website design
+- Hotel website design
+- Restaurant website design
+- Real estate website design
+- Coaching institute website design
+- Manufacturing website design
+- Professional-services website design
+
+These are research opportunities, not automatic page targets.
+
+G. INDUSTRY + LOCATION TERMS
+Where relevant, research combinations such as:
+- [industry] website design [location]
+- [industry] website development [location]
+- [industry] web design company [location]
+
+Do not create or recommend location/industry pages merely because the phrase exists.
+
+H. SEMANTIC / RELATED TERMS
+Identify useful entities, concepts, terminology, questions, and related topics that help demonstrate topical relevance.
+
+For each meaningful keyword or topic, record:
+
+- Keyword / topic
+- Search intent
+- Search type
+- Evidence source
+- Demand classification
+- Competition observation
+- Local relevance
+- Business relevance
+- Priority
+- Recommended page
+- Recommended page section
+- Whether exact wording is necessary
+- Whether it is a future-page opportunity
+
+Use these priority classifications:
+
+PRIMARY
+SECONDARY
+LONG-TAIL
+NICHE OPPORTUNITY
+SEMANTIC SUPPORT
+FUTURE PAGE OPPORTUNITY
+DO NOT TARGET
+
+Do not force every researched keyword into the current page.
+
+Do not use a keyword on the current page if another existing page clearly owns the topic.
+
+Do not treat keyword frequency as the objective.
+
 --------------------------------------------------
-8. LOCAL RESEARCH
+KEYWORD DEMAND EVIDENCE
 --------------------------------------------------
 
-Research the target location only as much as necessary to understand genuine local relevance.
+Distinguish clearly between:
 
-Identify useful, verifiable local information such as:
+VERIFIED SEARCH-VOLUME DATA
+SERP EVIDENCE
+COMPETITOR LANGUAGE
+RELATED-QUERY EVIDENCE
+STRATEGIC INFERENCE
 
-- Relevant neighborhoods
-- Major local business areas
-- Local business patterns
-- Local service needs
-- Geographic considerations
-- Verified local facts
-- Relevant local customer conditions
+Live SERP research alone does NOT establish monthly search volume.
 
-Use local references only when they genuinely improve the page.
+If a reliable keyword-data source is available, use it and identify the source.
 
-Do NOT add a landmark merely because the prompt requires one.
+If exact search volume cannot be verified:
 
-Do NOT invent:
+SEARCH VOLUME CANNOT BE VERIFIED WITH AVAILABLE INFORMATION.
 
-- Local businesses
-- Neighborhood claims
-- Customer behavior
-- Weather problems
-- Local statistics
-- Population figures
-- Prices
-- Local rankings
-- Local market claims
+Never invent monthly volumes, keyword difficulty scores, CPC, traffic estimates, or "high-volume" labels.
 
-If a local fact cannot be verified:
+If volume is unavailable, use evidence-based classifications such as:
+- Strong SERP demand signal
+- Moderate SERP demand signal
+- Narrow/long-tail opportunity
+- Low-confidence opportunity
 
-CANNOT BE VERIFIED WITH AVAILABLE INFORMATION.
+Do not present these classifications as measured search volume.
 
-Do not use it.
+--------------------------------------------------
+KEYWORD OWNERSHIP & CANNIBALIZATION
+--------------------------------------------------
 
+For every important keyword cluster, determine:
+
+- Current page owner
+- Intended search intent
+- Whether an existing page already satisfies the intent
+- Whether the topic belongs on the current page
+- Whether it should be a supporting mention/link
+- Whether it is a potential future standalone page
+- Whether targeting it on the current page could cause overlap
+
+Use this rule:
+
+ONE CLEAR SEARCH INTENT = ONE CLEAR PRIMARY PAGE OWNER
+
+Related topics may be mentioned where useful, but do not create competing pages around the same intent without a documented reason.
+
+If a keyword represents a genuinely distinct customer type, problem, or search intent and the evidence supports a standalone page, classify it as:
+
+FUTURE PAGE OPPORTUNITY
+
+Do not create that page automatically.
+
+--------------------------------------------------
+INDUSTRY PAGE DECISION
+--------------------------------------------------
+
+When industry-specific opportunities are discovered, evaluate:
+
+- Search intent
+- SERP page types
+- Commercial intent
+- Competition
+- Business capability
+- Distinct customer problems
+- Distinct information requirements
+- Evidence available to support a useful page
+- Risk of duplicating the general service page
+
+Only recommend a future industry page when the evidence supports a genuinely distinct useful page.
+
+Do not create near-identical pages for:
+- School
+- Clinic
+- Doctor
+- Hotel
+- Restaurant
+- Real estate
+- Other industries
+
+unless each page can provide materially different information and serves a distinct search intent.
+
+--------------------------------------------------
+KEYWORD-TO-CONTENT MAPPING
+--------------------------------------------------
+
+Before writing, map the highest-priority topics to actual page locations.
+
+Example:
+
+Keyword/topic:
+Intent:
+Priority:
+Evidence:
+Page owner:
+Page section:
+Natural usage:
+Internal-link target if not owned here:
+
+Use exact keyword wording only when it reads naturally.
+
+A keyword does not need to appear verbatim to be represented topically.
+
+--------------------------------------------------
+8. LOCAL GEO INTELLIGENCE
+
+GOOGLE BUSINESS PROFILE ALIGNMENT
+
+HUB-AND-SPOKE LOCAL ARCHITECTURE
+
+Evaluate whether nearby NCR markets such as Noida, Greater Noida, Gurugram, Ghaziabad, and Faridabad should be:
+- Contextual mentions on the primary page
+- Linked to an existing dedicated location page
+- Consolidated under a broader Delhi NCR hub
+- Considered as a future page opportunity
+
+Base the decision on distinct search intent, verified service coverage, business presence, SERP evidence, and existing site architecture.
+
+Do not create sub-location pages merely to capture geographic variations.
+
+
+When local intent is material, assess whether the page is consistent with verified business information across the website and Google Business Profile where accessible.
+
+Check, where verifiable:
+- Business name
+- Address or verified service area
+- Phone
+- Primary business category
+- Services
+- Local relevance
+
+Do not invent or recommend unsupported GBP categories, locations, addresses, reviews, or service areas.
+
+Treat GBP alignment as a local-search consistency check, not a guaranteed ranking or Map Pack tactic.
+
+--------------------------------------------------
+
+For local service pages, research the actual geographic market.
+
+Do not treat the target city as a single keyword.
+
+Where relevant, investigate:
+
+- Core city
+- Major neighborhoods
+- Commercial districts
+- Business hubs
+- Adjacent cities
+- Nearby districts
+- Nearby commercially relevant towns
+- Recognized metropolitan/regional areas
+- Service-area geography supported by the business
+
+For Delhi NCR or other multi-city regions, investigate the actual relevant market rather than repeatedly writing only the umbrella term.
+
+Potential Delhi NCR research areas may include Delhi, New Delhi, Noida, Greater Noida, Gurugram/Gurgaon, Ghaziabad, Faridabad, and other nearby markets when they are genuinely relevant.
+
+This is a RESEARCH LIST, not a list to insert automatically into the page.
+
+For each location considered, determine:
+
+- Geographic relationship to the target market
+- Commercial relevance
+- Evidence of relevant search demand
+- Relevant competitors
+- Whether the business genuinely serves the area
+- Whether the location should be mentioned on the current page
+- Whether it represents a future location-page opportunity
+
+Do not create a page merely because a city or neighborhood exists.
+
+Do not repeat dozens of locations in one paragraph.
+
+Do not create substantially similar location pages simply to capture search traffic.
+
+Avoid doorway-page patterns.
+
+Use local areas only when they add genuine usefulness or clarify the real service area.
+
+--------------------------------------------------
+LOCAL SERVICE-AREA CONSISTENCY
+--------------------------------------------------
+
+When the business has a verified service area, compare the content strategy with the verified business location and service area.
+
+Check for consistency across available verified information such as:
+
+- Business location
+- Service area
+- Website location statements
+- Google Business Profile information, if provided or publicly verifiable
+- Contact information
+- About page information
+- Local service claims
+
+Do not invent service areas.
+
+Do not claim physical offices in locations where none are verified.
+
+Do not claim local presence merely because the business serves customers remotely.
+
+--------------------------------------------------
+LOCAL ENTITY & MARKET SIGNALS
+--------------------------------------------------
+
+When useful and verifiable, identify:
+
+- Relevant local business districts
+- Business clusters
+- Common customer types in the area
+- Genuine local service considerations
+- Locally meaningful terminology
+
+Use these as context, not as keyword stuffing.
+
+A local reference should contribute information or clarify relevance.
+
+--------------------------------------------------
+INFORMATION OWNERSHIP
+--------------------------------------------------
+
+Before writing, identify whether any important topic belongs to another service.
+
+Do not repeatedly explain another service in depth.
+
+For example:
+
+If the page is Website Design & Development, do not turn it into a full SEO page.
+
+If the page is SEO Services, do not turn it into a full Digital Marketing page.
+
+If the page is WordPress Services, do not duplicate the full Website Design & Development service.
+
+Explain related services briefly when useful and link to the appropriate page where possible.
+
+Each page should have a clear subject.
 
 --------------------------------------------------
 9. BUSINESS FACT VERIFICATION
@@ -539,7 +923,13 @@ Do not proceed until you have established:
 - Content opportunities
 - Verified PAA, if available
 - Related topics
-- Keyword opportunities
+- Keyword opportunity map
+- Head, local, service-specific, long-tail, low-volume/niche, industry, and semantic opportunities where relevant
+- Keyword demand evidence and its limitations
+- Keyword ownership/cannibalization assessment
+- Industry + location opportunities where relevant
+- Local geo/service-area evidence
+- Competitor reverse-engineering findings
 - Verified local evidence
 - Verified business information
 - Important unknowns
@@ -593,9 +983,9 @@ List the important topics repeatedly covered.
 
 List the most useful missing information.
 
-## Observed PAA
+## Researched Questions & Search Suggestions
 
-Only include verified PAA questions.
+List verified PAA questions, Related Searches, Search Suggestions, or key pre-purchase objections observed during research.
 
 ## Related Topics
 
@@ -606,11 +996,32 @@ List meaningful related topics and entities.
 Primary topic:
 Supporting topics:
 Long-tail opportunities:
+Low-volume / niche opportunities:
+Industry opportunities:
+Industry + location opportunities:
+Semantic support topics:
+
+## Keyword Opportunity Map
+
+Highest-priority keyword/topic clusters:
+Keyword ownership:
+Future-page opportunities:
+Do-not-target topics:
+Search-volume evidence and limitations:
 
 ## Local Evidence
 
 Verified local facts:
 Relevant local context:
+Core target locations:
+Nearby commercially relevant locations:
+Verified service-area evidence:
+
+## Competitive Opportunity
+
+What ranking pages do well:
+What ranking pages leave unresolved:
+What the business can genuinely improve:
 
 ## Business Evidence
 
@@ -667,8 +1078,13 @@ The blueprint must answer:
 9. What local information genuinely belongs here?
 10. What verified business information can be used?
 11. What internal links would help the user?
-12. What questions should be answered?
-13. What should the reader understand or be able to decide after reading?
+12. What questions should be answered? If reliable question evidence exists, assign each question to: MAIN CONTENT H2/H3, FAQ SECTION, ANOTHER EXISTING PAGE, FUTURE PAGE, or DO NOT USE. If no reliable question evidence exists, record NO QUESTION EVIDENCE IDENTIFIED and skip question mapping.
+13. Which keyword/topic clusters belong on this page?
+Apply the Phase 1 keyword ownership decision to assign each cluster to this page, an existing page, or a future page.
+14. Which keyword/topic clusters belong on another existing page?
+15. Which opportunities should be treated as future standalone pages?
+16. Which local areas genuinely belong in this page?
+17. What should the reader understand or be able to decide after reading?
 
 Create a proposed page structure based on the evidence.
 
@@ -676,28 +1092,7 @@ Do not use a fixed template if the SERP or service requires a different structur
 
 The structure should serve the topic.
 
-
 --------------------------------------------------
-INFORMATION OWNERSHIP
---------------------------------------------------
-
-Before writing, identify whether any important topic belongs to another service.
-
-Do not repeatedly explain another service in depth.
-
-For example:
-
-If the page is Website Design & Development, do not turn it into a full SEO page.
-
-If the page is SEO Services, do not turn it into a full Digital Marketing page.
-
-If the page is WordPress Services, do not duplicate the full Website Design & Development service.
-
-Explain related services briefly when useful and link to the appropriate page where possible.
-
-Each page should have a clear subject.
-
-
 ==================================================
 PHASE 3 COMPLETION GATE
 ==================================================
@@ -764,6 +1159,7 @@ Do not make the writing sound childish.
 
 --------------------------------------------------
 OPENING / DIRECT ANSWER
+Answer the primary search intent clearly near the beginning of the page. Do not target a fixed word count or assume that a particular opening length guarantees Featured Snippet, AI Overview, or AI Mode visibility.
 --------------------------------------------------
 
 Start with a concise direct answer to the user's main need.
@@ -804,6 +1200,11 @@ The page should sound relevant to someone actually searching for the service in 
 
 --------------------------------------------------
 INFORMATION GAIN
+
+If the verified business information includes a unique, specific, or genuinely distinctive methodology (for example, a wireframe-first process or a specific client onboarding method), elevate it as a core differentiator. Explain exactly how the business works and why that process matters to the customer rather than relying on generic industry steps.
+- Prefer original, verified business process details that add useful information competitors may not provide.
+- Do not claim that a proprietary methodology is a guaranteed ranking factor or that Google rewards a particular process merely because it is proprietary.
+
 --------------------------------------------------
 
 The page must add useful information beyond generic competitor summaries.
@@ -870,6 +1271,21 @@ FAQ
 
 Include only useful questions relevant to the actual service and search intent.
 
+Do not automatically place every researched question in the FAQ.
+
+Questions that represent important buying decisions, objections, or core service understanding should be promoted into the main H2/H3 content.
+
+Use the FAQ only for secondary, quick-reference questions that genuinely help the reader.
+
+Do not create FAQs merely to insert keywords.
+
+Do not create generic educational FAQs such as "What is website design?" unless the question is demonstrably relevant to the target user's decision and supported by search or customer evidence.
+
+Commercial service pages should prioritize questions that help the visitor evaluate, compare, choose, budget, prepare for, or start the service.
+
+
+Do not create an FAQ section merely because competitors have one.
+
 Use questions observed during research where appropriate.
 
 Do not manufacture questions simply to add an FAQ section.
@@ -901,6 +1317,22 @@ If meaningful differentiation is not available, focus on the service itself rath
 
 --------------------------------------------------
 WEAVING TRUST SIGNALS
+
+- Where visual proof would strengthen a claim (for example, a specific design process, a verified local project, wireframes, before/after work, or another concrete example), insert a clear Markdown placeholder for the publisher, such as: `[Insert screenshot of approved wireframe example here]`.
+- Do not invent, imply, or fabricate visual evidence. Use placeholders only when the required visual evidence is not already supplied.
+
+MEDIA & PERFORMANCE
+
+- Visual recommendations must remain practical for the existing page design.
+- Do not recommend unnecessarily large images, heavy video embeds, complex interactive components, or large tables when a lighter format communicates the same information.
+- Prefer appropriately sized, compressed, responsive media.
+- Do not redesign the page or introduce performance-heavy components unless the task explicitly allows implementation changes.
+
+- Do not add placeholders merely to decorate the page. Each placeholder must correspond to a specific claim or section where visual evidence would materially improve understanding or trust.
+- The same visual-evidence rule applies to complex service explanations, workflows, comparisons, before/after examples, wireframes, interface examples, diagrams, or technical concepts where a visual would materially improve understanding.
+- Prefer a useful publisher placeholder over invented visual details. Examples include `[Insert approved wireframe example here]`, `[Insert before/after website screenshot here]`, or `[Insert process diagram here]`.
+
+
 --------------------------------------------------
 
 If verified trust information is provided in the inputs, use it naturally where it supports the reader's decision.
@@ -1056,8 +1488,39 @@ H1:
 Suggested URL:
 Canonical recommendation:
 Internal-link opportunities:
-Image/alt-text recommendation:
-Relevant structured-data recommendation, if appropriate:
+Image/alt-text recommendations for publisher visual placeholders:
+Provide descriptive, accessibility-focused alt-text recommendations based strictly on what the eventual image or visual proof actually demonstrates. Claude must not invent what the future image will contain.
+TOPICAL INTERNAL LINKING
+
+SITE TAXONOMY & LINK ARCHITECTURE
+
+Before recommending internal links, inspect the existing page taxonomy and ownership map.
+
+Prefer links between genuinely related:
+- Parent and child pages
+- Pillar and service pages
+- Sibling service pages
+- Service and location pages
+- Relevant local hubs and sub-location pages
+
+Identify orphan or weakly connected pages when relevant.
+
+Do not create artificial links simply to satisfy a numerical target.
+Do not force a hub-and-spoke structure where distinct search intent or business evidence does not justify it.
+
+
+- Recommend 2 to 3 specific existing pages that this page should link to, using natural descriptive anchor text.
+- Recommend 2 to 3 existing pages that should link back to this page when those pages are genuinely topically related and the architecture supports it.
+- Base all link recommendations on the verified page-ownership map and actual existing URLs.
+- Do not force links merely to increase link count.
+- Do not recommend links to removed, nonexistent, or unrelated pages.
+- Distinguish contextual links from navigation links such as Previous/Next.
+- Use natural anchor text. Do not require exact-match keyword anchors when they would sound unnatural.
+
+Relevant structured-data recommendation, if appropriate (e.g., LocalBusiness or Service schema based strictly on verified business facts; do NOT recommend FAQPage schema for commercial rich snippets or AggregateRating schema without verified review data):
+
+Do not add geographic entity URIs, Wikidata/GeoNames references, `hasOfferCatalog`, or other advanced properties merely to create a perceived ranking advantage. Use only properties that accurately describe verified, visible business information and are supported by current Google/Search Central guidance.
+
 
 These are recommendations only.
 
@@ -1125,11 +1588,12 @@ List important information that was intentionally excluded because it could not 
 
 ==================================================
 GOOGLE SEO PRINCIPLES
-==================================================
 
 Follow current Google Search Central guidance.
 
 Do not assume:
+
+- FAQ structured data will generate rich results for commercial service pages (Google has sunsetted FAQ rich results for commercial sites; write FAQs for user clarity and conversion, not for schema rich snippets).
 
 - More words automatically rank better.
 - More keywords automatically rank better.
@@ -1191,12 +1655,17 @@ The final page is successful only if:
 - It does not rely on arbitrary word counts.
 - It does not rely on keyword stuffing.
 - It does not fabricate differentiation.
-- It does not invent PAA questions.
+- It does not invent PAA questions, Related Searches, Search Suggestions, or customer objections.
 - It does not create artificial local references.
 - It reads naturally.
 - It has a clear purpose.
 - It does not unnecessarily duplicate another service page.
 - The SEO recommendations are based on the actual research.
+- The keyword strategy covers broad, local, service-specific, long-tail, low-volume/niche, industry, and semantic opportunities where relevant.
+- Search-volume claims are made only when supported by reliable keyword data.
+- Important keyword clusters have a clear page owner or are explicitly classified as future opportunities.
+- Local targeting uses genuine service-area evidence and avoids doorway-page patterns.
+- Industry and location opportunities are not forced into the page merely because they contain target keywords.
 - No claim is presented as verified when it is only an inference.
 - The footer CTA is not designed or finalized during this task.
 - No website files are modified as part of this task.
