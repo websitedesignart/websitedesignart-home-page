@@ -75,32 +75,46 @@
       const onMove = (e) => { tgt.x = e.clientX / window.innerWidth; tgt.y = 1 - e.clientY / window.innerHeight; };
       window.addEventListener('pointermove', onMove, { passive: true });
 
+      // The fbm pattern is resolution-independent (scaled by aspect only), so the
+      // internal render size is capped and CSS upscales the canvas: identical look,
+      // a fraction of the per-frame pixel cost.
       const resize = () => {
-        const dpr = Math.min(devicePixelRatio || 1, 2);
-        canvas.width = Math.max(1, Math.floor(innerWidth * dpr));
-        canvas.height = Math.max(1, Math.floor(innerHeight * dpr));
+        const scale = Math.min(1, 960 / Math.max(1, innerWidth));
+        canvas.width = Math.max(1, Math.floor(innerWidth * scale));
+        canvas.height = Math.max(1, Math.floor(innerHeight * scale));
         gl.viewport(0, 0, canvas.width, canvas.height);
       };
       window.addEventListener('resize', resize, { passive: true });
       resize();
 
       const t0 = performance.now();
-      let raf;
-      const frame = () => {
+      let raf = 0;
+      const draw = () => {
         mouse.x += (tgt.x - mouse.x) * 0.05;
         mouse.y += (tgt.y - mouse.y) * 0.05;
         gl.uniform2f(uRes, canvas.width, canvas.height);
         gl.uniform1f(uTime, (performance.now() - t0) / 1000);
         gl.uniform2f(uMouse, mouse.x, mouse.y);
         gl.drawArrays(gl.TRIANGLES, 0, 6);
-        raf = requestAnimationFrame(frame);
       };
-      frame();
+      const loop = () => { draw(); raf = requestAnimationFrame(loop); };
+      const start = () => { if (!raf) raf = requestAnimationFrame(loop); };
+      const stop = () => { if (raf) { cancelAnimationFrame(raf); raf = 0; } };
+
+      const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
+      const onVis = () => { (document.hidden || reduceMotion.matches) ? stop() : start(); };
+      document.addEventListener('visibilitychange', onVis);
+      if (reduceMotion.addEventListener) reduceMotion.addEventListener('change', onVis);
+
+      draw();
+      if (!reduceMotion.matches) start();
 
       this._cleanup = () => {
-        cancelAnimationFrame(raf);
+        stop();
         window.removeEventListener('pointermove', onMove);
         window.removeEventListener('resize', resize);
+        document.removeEventListener('visibilitychange', onVis);
+        if (reduceMotion.removeEventListener) reduceMotion.removeEventListener('change', onVis);
       };
     }
     disconnectedCallback() { this._cleanup && this._cleanup(); this._on = false; }

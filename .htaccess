@@ -1,0 +1,37 @@
+# WebsiteDesignArt - caching and security headers (Apache hosts)
+# Note: intentionally conservative on script caching - support.js is the page
+# runtime and this site deploys by manual file upload with unversioned URLs,
+# so long script TTLs would leave visitors on stale, potentially broken pages.
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  # Images change rarely and are replaced in place only deliberately
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  # Scripts: short TTL until URL versioning exists (deploys are manual/in-place)
+  ExpiresByType application/javascript "access plus 1 day"
+  ExpiresByType text/javascript "access plus 1 day"
+  # HTML always revalidates
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(webp|png|jpe?g|ico)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.js$">
+    Header set Cache-Control "public, max-age=86400, must-revalidate"
+  </FilesMatch>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Cross-Origin-Opener-Policy "same-origin"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains" env=HTTPS
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
