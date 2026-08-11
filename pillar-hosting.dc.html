@@ -32,6 +32,7 @@
   a:hover { color: #c2412a; }
   @keyframes inkUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
   @keyframes fadeUp { from { opacity: 0; } to { opacity: 1; } }
+  x-dc nav div[style*="menuVis"] { visibility: hidden !important }
   @media (max-width: 939.98px) {
     nav.nav-desktop { display: none !important }
     .nav-mbtn { display: inline-flex !important }
@@ -141,7 +142,7 @@
   <section data-screen-label="Pillar hero" style="position: relative">
     <div style="max-width: 1420px; margin: 0 auto; padding: 44px 36px 44px; display: grid; grid-template-columns: {{ heroCols }}; gap: {{ heroGap }}; align-items: center">
       <div>
-      <div style="display: flex; align-items: center; gap: 12px; font-family: Archivo, sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: {{ accent }}; animation: fadeUp 0.7s ease 0.05s both">
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px; font-family: Archivo, sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: {{ accent }}; animation: fadeUp 0.7s ease 0.05s both">
         <a href="index.html#disciplines" style="color: {{ accent }}">Services</a>
         <span style="width: 22px; height: 1px; background: {{ accent }}"></span>
         <span style="color: rgba(20,18,32,0.6)">The part you only notice when it breaks</span>
