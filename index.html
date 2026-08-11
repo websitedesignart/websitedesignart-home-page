@@ -33,6 +33,14 @@
   @keyframes drawIn { to { stroke-dashoffset: 0; } }
   @keyframes inkUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
   @keyframes fadeUp { from { opacity: 0; } to { opacity: 1; } }
+  @media (max-width: 939.98px) {
+    nav.nav-desktop { display: none !important }
+    .nav-mbtn { display: inline-flex !important }
+  }
+  @media (min-width: 940px) {
+    .nav-mpanel { display: none !important }
+    .nav-dwrap:focus-within .nav-ddrop { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important }
+  }
   @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
   @media (prefers-reduced-motion: reduce) { [data-marquee] { animation: none !important; } }
 </style>
@@ -45,11 +53,11 @@
   <header style="position: relative; z-index: 20">
     <div style="max-width: 1420px; margin: 0 auto; padding: 18px 36px 16px; display: flex; align-items: center; justify-content: space-between; gap: 32px">
       <a href="#top" style="font-family: Archivo, sans-serif; font-weight: 700; font-size: 19px; letter-spacing: -0.02em; line-height: 1"><img src="assets/logo.webp" alt="Website Design Art" width="126" height="84" fetchpriority="high" style="display: block; height: 84px; width: auto" /></a>
-      <nav style="display: flex; gap: 26px; font-family: Archivo, sans-serif; font-weight: 500; font-size: 15px; letter-spacing: -0.005em">
+      <nav class="nav-desktop" style="display: flex; gap: 26px; font-family: Archivo, sans-serif; font-weight: 500; font-size: 15px; letter-spacing: -0.005em">
         <a href="#top" style="color: rgba(20,18,32,0.82)" style-hover="color:#c2412a">Home</a>
-        <div onMouseEnter="{{ openMenu }}" onMouseLeave="{{ closeMenu }}" style="position: relative">
+        <div class="nav-dwrap" onMouseEnter="{{ openMenu }}" onMouseLeave="{{ closeMenu }}" style="position: relative">
           <a href="#disciplines" style="color: rgba(20,18,32,0.82); display: inline-flex; align-items: center; gap: 6px" style-hover="color:#c2412a">Services<span style="font-size: 9px; opacity: 0.7">▼</span></a>
-          <div style="position: absolute; top: 100%; left: -18px; padding-top: 12px; width: 288px; opacity: {{ menuOpacity }}; visibility: {{ menuVis }}; transform: {{ menuShift }}; transition: opacity 180ms ease, transform 180ms ease, visibility 180ms">
+          <div class="nav-ddrop" style="position: absolute; top: 100%; left: -18px; padding-top: 12px; width: 288px; opacity: {{ menuOpacity }}; visibility: {{ menuVis }}; transform: {{ menuShift }}; transition: opacity 180ms ease, transform 180ms ease, visibility 180ms">
             <div style="background: rgba(250,248,244,0.97); border: 1px solid rgba(20,18,32,0.3); box-shadow: 0 18px 40px rgba(20,18,32,0.14)">
             <a href="pillar-web-architecture.dc.html" style="display: block; padding: 13px 18px; border-bottom: 1px solid rgba(20,18,32,0.14); transition: background 140ms ease" style-hover="background:rgba(20,18,32,0.06)">
               <div style="font-family: Archivo, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Web Architecture &amp; Build</div>
@@ -82,6 +90,51 @@
         <a href="#process" style="color: rgba(20,18,32,0.82)" style-hover="color:#c2412a">Process</a>
         <a href="about.dc.html" style="color: rgba(20,18,32,0.82)" style-hover="color:#c2412a">About</a>
         <a href="contact.dc.html" style="color: rgba(20,18,32,0.82)" style-hover="color:#c2412a">Contact</a>
+      </nav>
+      <button class="nav-mbtn" type="button" aria-label="Menu" aria-controls="mnav-panel" aria-expanded="{{ mmExpanded }}" onClick="{{ toggleMobile }}" data-mnav="1" style="display: none; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; background: transparent; border: 1px solid rgba(20,18,32,0.3); cursor: pointer">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="#14121f" stroke-width="1.8" style="display: block; display: {{ mmBurger }}"><path d="M3 6h16M3 11h16M3 16h16"></path></svg>
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="#14121f" stroke-width="1.8" style="display: none; display: {{ mmClose }}"><path d="M5 5l12 12M17 5L5 17"></path></svg>
+      </button>
+    </div>
+    <div id="mnav-panel" class="nav-mpanel" data-mnav="1" style="position: absolute; top: 100%; left: 0; right: 0; z-index: 45; background: rgba(250,248,244,0.97); border-top: 1px solid rgba(20,18,32,0.3); border-bottom: 1px solid rgba(20,18,32,0.3); box-shadow: 0 18px 40px rgba(20,18,32,0.14); overflow-x: hidden; overflow-y: auto; max-height: 0; visibility: hidden; opacity: 0; transition: max-height 220ms ease, opacity 180ms ease, visibility 220ms; max-height: {{ mmMax }}; visibility: {{ mmVis }}; opacity: {{ mmOpacity }}">
+      <nav aria-label="Mobile" style="font-family: Archivo, sans-serif">
+        <a href="index.html" onClick="{{ closeMobile }}" style="display: flex; align-items: center; min-height: 50px; padding: 0 24px; border-bottom: 1px solid rgba(20,18,32,0.14); font-size: 16px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Home</a>
+        <div style="display: flex; align-items: stretch; border-bottom: 1px solid rgba(20,18,32,0.14)">
+          <a href="index.html#disciplines" onClick="{{ closeMobile }}" style="flex: 1; display: flex; align-items: center; min-height: 50px; padding: 0 24px; font-size: 16px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Services</a>
+          <button type="button" aria-label="Toggle services list" aria-controls="mnav-svc" aria-expanded="{{ svcExpanded }}" onClick="{{ toggleMobileSvc }}" style="width: 50px; display: flex; align-items: center; justify-content: center; background: transparent; border: 0; border-left: 1px solid rgba(20,18,32,0.14); cursor: pointer; padding: 0">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#14121f" stroke-width="1.8" style="transition: transform 180ms ease; transform: {{ svcChev }}"><path d="M4 6l4 4 4-4"></path></svg>
+          </button>
+        </div>
+        <div id="mnav-svc" style="overflow: hidden; background: rgba(20,18,32,0.03); max-height: 0; visibility: hidden; transition: max-height 220ms ease, visibility 220ms; max-height: {{ svcMax }}; visibility: {{ svcVis }}">
+        <a href="pillar-web-architecture.dc.html" onClick="{{ closeMobile }}" style="display: block; padding: 12px 24px 12px 36px; border-bottom: 1px solid rgba(20,18,32,0.1)">
+          <div style="font-size: 14px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Web Architecture &amp; Build</div>
+          <div style="margin-top: 3px; font-size: 11.5px; font-weight: 500; color: rgba(20,18,32,0.6)">New sites, WordPress builds</div>
+        </a>
+        <a href="pillar-custom-software.dc.html" onClick="{{ closeMobile }}" style="display: block; padding: 12px 24px 12px 36px; border-bottom: 1px solid rgba(20,18,32,0.1)">
+          <div style="font-size: 14px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Custom Software &amp; Automation</div>
+          <div style="margin-top: 3px; font-size: 11.5px; font-weight: 500; color: rgba(20,18,32,0.6)">Bespoke tools, workflows</div>
+        </a>
+        <a href="pillar-ecommerce.dc.html" onClick="{{ closeMobile }}" style="display: block; padding: 12px 24px 12px 36px; border-bottom: 1px solid rgba(20,18,32,0.1)">
+          <div style="font-size: 14px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">E-Commerce Operations</div>
+          <div style="margin-top: 3px; font-size: 11.5px; font-weight: 500; color: rgba(20,18,32,0.6)">Storefronts, catalogue, support</div>
+        </a>
+        <a href="pillar-growth.dc.html" onClick="{{ closeMobile }}" style="display: block; padding: 12px 24px 12px 36px; border-bottom: 1px solid rgba(20,18,32,0.1)">
+          <div style="font-size: 14px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Growth &amp; Visibility</div>
+          <div style="margin-top: 3px; font-size: 11.5px; font-weight: 500; color: rgba(20,18,32,0.6)">SEO, campaigns, social, copy</div>
+        </a>
+        <a href="pillar-brand.dc.html" onClick="{{ closeMobile }}" style="display: block; padding: 12px 24px 12px 36px; border-bottom: 1px solid rgba(20,18,32,0.1)">
+          <div style="font-size: 14px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Brand &amp; Creative Assets</div>
+          <div style="margin-top: 3px; font-size: 11.5px; font-weight: 500; color: rgba(20,18,32,0.6)">Identity, collateral, content</div>
+        </a>
+        <a href="pillar-hosting.dc.html" onClick="{{ closeMobile }}" style="display: block; padding: 12px 24px 12px 36px; border-bottom: 1px solid rgba(20,18,32,0.1)">
+          <div style="font-size: 14px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Hosting &amp; Site Management</div>
+          <div style="margin-top: 3px; font-size: 11.5px; font-weight: 500; color: rgba(20,18,32,0.6)">Domains, speed, security, uptime</div>
+        </a>
+        <a href="index.html#disciplines" onClick="{{ closeMobile }}" style="display: block; padding: 14px 24px 14px 36px; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #c2412a">All 18 services →</a>
+        </div>
+        <a href="index.html#process" onClick="{{ closeMobile }}" style="display: flex; align-items: center; min-height: 50px; padding: 0 24px; border-bottom: 1px solid rgba(20,18,32,0.14); font-size: 16px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Process</a>
+        <a href="about.dc.html" onClick="{{ closeMobile }}" style="display: flex; align-items: center; min-height: 50px; padding: 0 24px; border-bottom: 1px solid rgba(20,18,32,0.14); font-size: 16px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">About</a>
+        <a href="contact.dc.html" onClick="{{ closeMobile }}" style="display: flex; align-items: center; min-height: 50px; padding: 0 24px; font-size: 16px; font-weight: 600; letter-spacing: -0.02em; color: #14121f">Contact</a>
       </nav>
     </div>
   </header>
@@ -559,11 +612,17 @@ class Component extends DCLogic {
       if (narrow !== this.state.narrow) this.setState({ narrow });
     };
     window.addEventListener('resize', this._onResize);
+    this._onDocClick = (e) => { if (this.state.mobile && e.target && e.target.closest && !e.target.closest('[data-mnav]')) this.setState({ mobile: false, mobileSvc: false }); };
+    document.addEventListener('click', this._onDocClick, true);
+    this._onDocKey = (e) => { if (e.key === 'Escape' && this.state.mobile) { this.setState({ mobile: false, mobileSvc: false }); const mb = document.querySelector('.nav-mbtn'); if (mb) mb.focus(); } };
+    document.addEventListener('keydown', this._onDocKey);
+    this._onResizeM = () => { if (window.innerWidth >= 940 && this.state.mobile) this.setState({ mobile: false, mobileSvc: false }); };
+    window.addEventListener('resize', this._onResizeM);
 
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', this._onResize);
+    window.removeEventListener('resize', this._onResize); window.removeEventListener('resize', this._onResizeM); document.removeEventListener('click', this._onDocClick, true); document.removeEventListener('keydown', this._onDocKey);
   }
 
   renderVals() {
@@ -572,6 +631,19 @@ class Component extends DCLogic {
       accent: this.props.accent ?? '#c2412a',
       openMenu: () => this.setState({ menu: true }),
       closeMenu: () => this.setState({ menu: false }),
+      mmExpanded: this.state.mobile ? 'true' : 'false',
+      mmVis: this.state.mobile ? 'visible' : 'hidden',
+      mmOpacity: this.state.mobile ? 1 : 0,
+      mmMax: this.state.mobile ? 'calc(100vh - 118px)' : '0px',
+      mmBurger: this.state.mobile ? 'none' : 'block',
+      mmClose: this.state.mobile ? 'block' : 'none',
+      svcExpanded: this.state.mobileSvc ? 'true' : 'false',
+      svcChev: this.state.mobileSvc ? 'rotate(180deg)' : 'none',
+      svcMax: this.state.mobileSvc ? '480px' : '0px',
+      svcVis: this.state.mobileSvc ? 'visible' : 'hidden',
+      toggleMobile: () => this.setState({ mobile: !this.state.mobile, mobileSvc: false }),
+      closeMobile: () => this.setState({ mobile: false, mobileSvc: false }),
+      toggleMobileSvc: () => this.setState({ mobileSvc: !this.state.mobileSvc }),
       menuOpacity: this.state.menu ? 1 : 0,
       menuVis: this.state.menu ? 'visible' : 'hidden',
       menuShift: this.state.menu ? 'translateY(0)' : 'translateY(-6px)',
