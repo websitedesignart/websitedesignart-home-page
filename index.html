@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preload" as="script" href="assets/vendor/react.production.min.js" integrity="sha384-DGyLxAyjq0f9SPpVevD6IgztCFlnMF6oW/XQGmfe+IsZ8TqEiDrcHkMLKI6fiB/Z" crossorigin="anonymous">
 <link rel="preload" as="script" href="assets/vendor/react-dom.production.min.js" integrity="sha384-gTGxhz21lVGYNMcdJOyq01Edg0jhn/c22nsx0kyqP0TxaV5WVdsSH1fSDUf5YJj1" crossorigin="anonymous">
-<script src="./support.js"></script>
+<script src="./support.js" defer></script>
 </head>
 <body>
 <x-dc>
@@ -34,7 +34,6 @@
   @keyframes inkUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
   @keyframes fadeUp { from { opacity: 0; } to { opacity: 1; } }
   x-dc nav div[style*="menuVis"] { visibility: hidden !important }
-  x-dc { display: none }
   @media (max-width: 359.98px) { .pillar-strip { grid-template-columns: 1fr !important } }
   @media (max-width: 939.98px) {
     nav.nav-desktop { display: none !important }
@@ -181,8 +180,8 @@
           </div>
         </div>
         <div style="display: flex; align-items: center; gap: 20px; width: {{ heroBleedW }}; margin-top: 4px; margin-right: {{ heroBleedM }}; padding: 0 2% 0 9%; animation: fadeUp 1s ease 0.35s both">
-          <div style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; color: {{ accent }}">{{ heroCaption }}</div>
-          <div style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; color: rgba(20,18,32,0.6)">{{ heroCounter }}</div>
+          <div style="visibility: hidden; visibility: {{ heroMetaVis }}; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; color: {{ accent }}">{{ heroCaption }}</div>
+          <div style="visibility: hidden; visibility: {{ heroMetaVis }}; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; color: rgba(20,18,32,0.6)">{{ heroCounter }}</div>
           <div style="display: flex; gap: 10px; margin-left: auto">
             <button type="button" aria-label="Previous project" onClick="{{ heroPrev }}" style="width: 42px; height: 42px; border-radius: 50%; border: 1px solid rgba(20,18,32,0.58); background: transparent; color: #14121f; font-size: 17px; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 160ms ease, color 160ms ease, border-color 160ms ease" style-hover="background:#14121f;color:#f5f3ee;border-color:#14121f">←</button>
             <button type="button" aria-label="Next project" onClick="{{ heroNext }}" style="width: 42px; height: 42px; border-radius: 50%; border: 1px solid rgba(20,18,32,0.58); background: transparent; color: #14121f; font-size: 17px; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 160ms ease, color 160ms ease, border-color 160ms ease" style-hover="background:#14121f;color:#f5f3ee;border-color:#14121f">→</button>
@@ -634,6 +633,7 @@ class Component extends DCLogic {
       accent: this.props.accent ?? '#c2412a',
       openMenu: () => this.setState({ menu: true }),
       closeMenu: () => this.setState({ menu: false }),
+      heroMetaVis: 'visible',
       mmExpanded: this.state.mobile ? 'true' : 'false',
       mmVis: this.state.mobile ? 'visible' : 'hidden',
       mmOpacity: this.state.mobile ? 1 : 0,
