@@ -66,13 +66,13 @@ URLs are root-relative (static site — the filename is the URL). Pages have **n
 
 | #  | Page Type | Group | Page Name (H1) | Filename / URL | Main Image |
 |----|-----------|-------|----------------|----------------|------------|
-| 1  | Homepage | — | "A site is drawn before it's built." | `index.html` | `assets/hero-tablet-crop.png` (device mockup, used 5×) |
-| 2  | Pillar | — | Web Architecture & Build | `pillar-web-architecture.dc.html` | `assets/pillar-web-architecture-hero.png` |
-| 3  | Pillar | — | Custom Software & Automation | `pillar-custom-software.dc.html` | `assets/pillar-custom-software-hero.png` |
-| 4  | Pillar | — | E-Commerce Operations | `pillar-ecommerce.dc.html` | `assets/pillar-ecommerce-hero.png` |
-| 5  | Pillar | — | Growth & Visibility | `pillar-growth.dc.html` | `assets/pillar-growth-hero.png` |
-| 6  | Pillar | — | Brand & Creative Assets | `pillar-brand.dc.html` | `assets/pillar-brand-hero.png` |
-| 7  | Pillar | — | Hosting & Site Management | `pillar-hosting.dc.html` | `assets/pillar-hosting-hero.png` |
+| 1  | Homepage | — | "A site is drawn before it's built." | `index.html` | `assets/hero-tablet-crop.webp` (device mockup, used 5×) |
+| 2  | Pillar | — | Web Architecture & Build | `pillar-web-architecture.dc.html` | `assets/pillar-web-architecture-hero.webp` |
+| 3  | Pillar | — | Custom Software & Automation | `pillar-custom-software.dc.html` | `assets/pillar-custom-software-hero.webp` |
+| 4  | Pillar | — | E-Commerce Operations | `pillar-ecommerce.dc.html` | `assets/pillar-ecommerce-hero.webp` |
+| 5  | Pillar | — | Growth & Visibility | `pillar-growth.dc.html` | `assets/pillar-growth-hero.webp` |
+| 6  | Pillar | — | Brand & Creative Assets | `pillar-brand.dc.html` | `assets/pillar-brand-hero.webp` |
+| 7  | Pillar | — | Hosting & Site Management | `pillar-hosting.dc.html` | `assets/pillar-hosting-hero.webp` |
 | 8  | Service | Web Architecture & Build | Website Design & Development | `website-design-development.dc.html` | `assets/service-01.webp` |
 | 9  | Service | E-Commerce Operations | E-Commerce Website Development | `ecommerce-website-development.dc.html` | `assets/service-02.webp` |
 | 10 | Service | Web Architecture & Build | WordPress Services | `wordpress-services.dc.html` | `assets/service-03.webp` |
@@ -91,8 +91,8 @@ URLs are root-relative (static site — the filename is the URL). Pages have **n
 | 23 | Service | E-Commerce Operations | E-Commerce Support | `ecommerce-support.dc.html` | `assets/service-16.webp` |
 | 24 | Service | Hosting & Site Management | Cloud & Digital Solutions | `cloud-digital-solutions.dc.html` | `assets/service-17.webp` |
 | 25 | Service | Custom Software & Automation | IT & Business Consultancy | `it-business-consultancy.dc.html` | `assets/service-18.webp` |
-| 26 | About | — | About page | `about.dc.html` | `assets/about-hero-v5.png` |
-| 27 | Contact | — | Contact page | `contact.dc.html` | `assets/contact-hero.png` |
+| 26 | About | — | About page | `about.dc.html` | `assets/about-hero-v5.webp` |
+| 27 | Contact | — | Contact page | `contact.dc.html` | `assets/contact-hero.webp` |
 
 ## 4. Page Groups / Pillars
 
@@ -144,16 +144,16 @@ The Previous/Next order follows the homepage card order (01→…→17→20) and
 |------|------|---------|
 | `assets/logo.webp` | Logo (header home-link, all pages) | All 27 pages. Transparent WebP, rendered at 48px height. **Contains a spelling error: "Website Desing Art"** — replace file in place when corrected. |
 | `assets/service-01.webp` … `assets/service-18.webp` | Multi-role service image (see §16) | Homepage card + service-page hero + Previous/Next thumbnails on neighbouring pages. One file per service, reused everywhere that service appears. |
-| `assets/pillar-web-architecture-hero.png` | Pillar hero | `pillar-web-architecture.dc.html` only |
-| `assets/pillar-custom-software-hero.png` | Pillar hero | `pillar-custom-software.dc.html` only |
-| `assets/pillar-ecommerce-hero.png` | Pillar hero | `pillar-ecommerce.dc.html` only |
-| `assets/pillar-growth-hero.png` | Pillar hero | `pillar-growth.dc.html` only |
-| `assets/pillar-brand-hero.png` | Pillar hero | `pillar-brand.dc.html` only |
-| `assets/pillar-hosting-hero.png` | Pillar hero | `pillar-hosting.dc.html` only |
-| `assets/about-hero-v5.png` | About hero | `about.dc.html` only |
-| `assets/contact-hero.png` | Contact hero | `contact.dc.html` only |
-| `assets/hero-tablet-crop.png` | Homepage hero device mockup | `index.html` (referenced 5×, in the hero showcase rotation) |
-| `assets/hero-tablet.png` | **Orphan — referenced by no page or script** | Uncropped source of `hero-tablet-crop.png` (kept on disk; do not assume it is safe to delete without authorization) |
+| `assets/pillar-web-architecture-hero.webp` | Pillar hero | `pillar-web-architecture.dc.html` only |
+| `assets/pillar-custom-software-hero.webp` | Pillar hero | `pillar-custom-software.dc.html` only |
+| `assets/pillar-ecommerce-hero.webp` | Pillar hero | `pillar-ecommerce.dc.html` only |
+| `assets/pillar-growth-hero.webp` | Pillar hero | `pillar-growth.dc.html` only |
+| `assets/pillar-brand-hero.webp` | Pillar hero | `pillar-brand.dc.html` only |
+| `assets/pillar-hosting-hero.webp` | Pillar hero | `pillar-hosting.dc.html` only |
+| `assets/about-hero-v5.webp` | About hero | `about.dc.html` only |
+| `assets/contact-hero.webp` | Contact hero | `contact.dc.html` only |
+| `assets/hero-tablet-crop.webp` | Homepage hero device mockup | `index.html` (referenced 5×, in the hero showcase rotation) |
+| `assets/hero-tablet.png` | **Orphan — referenced by no page or script** | Uncropped source of `hero-tablet-crop.webp` (kept on disk; do not assume it is safe to delete without authorization) |
 
 ## 7. Homepage Structure (`index.html`)
 
@@ -330,7 +330,7 @@ No confirmed temporary site-structure items found.
 
 - **Deployment to resultnaukari.com:** mechanism unknown — no CI/deploy config exists in the repo; the live copy is updated by an external/manual process. As of 2026-08-09 the live site serves an older pre-cleanup version. CANNOT BE VERIFIED WITH AVAILABLE INFORMATION.
 - **Card numbering gap (18/19/20):** IT & Business Consultancy is numbered 20 on the homepage; there is no card 18, and 19 is the CTA card. Whether this is intentional branding or a leftover is not established. CANNOT BE VERIFIED WITH AVAILABLE INFORMATION.
-- **`assets/hero-tablet.png`:** unreferenced by any page/script; presumed source file for `hero-tablet-crop.png`. Intent unknown — left untouched.
+- **`assets/hero-tablet.png`:** unreferenced by any page/script; presumed source file for `hero-tablet-crop.webp`. Intent unknown — left untouched.
 - **`<title>` tags:** absent on all 27 pages. Page titles listed in this document are H1s, not `<title>` values.
 
 ## 21. Maintenance Notes
