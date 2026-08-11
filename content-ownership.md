@@ -2,8 +2,9 @@
 
 Approved content architecture for the final 25-page site. Companion to `structure.md`
 (current-state reference) and `.claude/skills/local-seo-content/SKILL.md` (writing process).
-Status: APPROVED 2026-08-10. The two merges below are approved architecture; implementation
-is a separate authorized step.
+Status: APPROVED 2026-08-10. Merges IMPLEMENTED 2026-08-11 (301 redirects in .htaccess;
+counters renumbered to "of 16"; homepage keeps all 18 cards relinked to surviving owners).
+Deep content redistribution still happens page-by-page in the writing phase per this map.
 
 Architecture: 27 current pages → 25 final pages.
 - MERGE: `cloud-digital-solutions.dc.html` → `domain-hosting-business-email.dc.html`

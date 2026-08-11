@@ -31,7 +31,7 @@ WebsiteDesignArt
 ├── Custom Software & Automation ................ pillar-custom-software.dc.html
 │   ├── Software Development .................... software-development.dc.html
 │   ├── Business Automation ..................... business-automation.dc.html
-│   └── IT & Business Consultancy ............... it-business-consultancy.dc.html
+│   └── IT & Business Consultancy ............... MERGED → software-development.dc.html (301)
 │
 ├── E-Commerce Operations ....................... pillar-ecommerce.dc.html
 │   ├── E-Commerce Website Development .......... ecommerce-website-development.dc.html
@@ -52,7 +52,7 @@ WebsiteDesignArt
 │   ├── Website Performance ..................... website-performance.dc.html
 │   ├── Website Security ........................ website-security.dc.html
 │   ├── Website Migration & Recovery ............ website-migration-recovery.dc.html
-│   └── Cloud & Digital Solutions ............... cloud-digital-solutions.dc.html
+│   └── Cloud & Digital Solutions ............... MERGED → domain-hosting-business-email.dc.html (301)
 │
 ├── About Us .................................... about.dc.html
 └── Contact Us .................................. contact.dc.html
@@ -89,8 +89,8 @@ URLs are root-relative (static site — the filename is the URL). Pages have **n
 | 21 | Service | Hosting & Site Management | Website Security | `website-security.dc.html` | `assets/service-14.webp` |
 | 22 | Service | Hosting & Site Management | Website Migration & Recovery | `website-migration-recovery.dc.html` | `assets/service-15.webp` |
 | 23 | Service | E-Commerce Operations | E-Commerce Support | `ecommerce-support.dc.html` | `assets/service-16.webp` |
-| 24 | Service | Hosting & Site Management | Cloud & Digital Solutions | `cloud-digital-solutions.dc.html` | `assets/service-17.webp` |
-| 25 | Service | Custom Software & Automation | IT & Business Consultancy | `it-business-consultancy.dc.html` | `assets/service-18.webp` |
+| 24 | Service | Hosting & Site Management | Cloud & Digital Solutions | MERGED → `domain-hosting-business-email.dc.html` (301) | `assets/service-17.webp` (homepage card) |
+| 25 | Service | Custom Software & Automation | IT & Business Consultancy | MERGED → `software-development.dc.html` (301) | `assets/service-18.webp` (homepage card) |
 | 26 | About | — | About page | `about.dc.html` | `assets/about-hero-v5.webp` |
 | 27 | Contact | — | Contact page | `contact.dc.html` | `assets/contact-hero.webp` |
 
@@ -130,11 +130,9 @@ Rule (verified 36/36 programmatically): a service's Previous/Next thumbnail is a
 | 13 | Website Performance | `website-performance.dc.html` | `assets/service-13.webp` | Website Content | Website Security |
 | 14 | Website Security | `website-security.dc.html` | `assets/service-14.webp` | Website Performance | Website Migration & Recovery |
 | 15 | Website Migration & Recovery | `website-migration-recovery.dc.html` | `assets/service-15.webp` | Website Security | E-Commerce Support |
-| 16 | E-Commerce Support | `ecommerce-support.dc.html` | `assets/service-16.webp` | Website Migration & Recovery | Cloud & Digital Solutions |
-| 17 | Cloud & Digital Solutions | `cloud-digital-solutions.dc.html` | `assets/service-17.webp` | E-Commerce Support | IT & Business Consultancy |
-| 20 | IT & Business Consultancy | `it-business-consultancy.dc.html` | `assets/service-18.webp` | Cloud & Digital Solutions | Website Design & Development |
+| 16 | E-Commerce Support | `ecommerce-support.dc.html` | `assets/service-16.webp` | Website Migration & Recovery | Website Design & Development |
 
-The Previous/Next order follows the homepage card order (01→…→17→20) and is **circular**: the last service links forward to the first, the first links back to the last.
+The Previous/Next order follows the homepage card order (01→…→16) and is **circular**: the last service links forward to the first, the first links back to the last. Counters read "NN of 16". The two former entries 17 (Cloud & Digital Solutions) and 20 (IT & Business Consultancy) were merged into their owners (2026-08-11) with 301 redirects; their homepage cards remain and link to the surviving pages.
 
 ## 6. Image / Asset Inventory
 
