@@ -1,6 +1,31 @@
+# Security (2026-09 incident follow-up). This is a static site: nothing here may
+# ever execute, list a directory, or expose repo/tooling files. In Sept 2026 an
+# attacker on the shared hosting account dropped index.php + PHP webshells into
+# this web root; these rules make such files inert.
+Options -Indexes
+DirectoryIndex index.html
+
+<IfModule mod_authz_core.c>
+  <FilesMatch "(?i)\.(php|php3|php4|php5|php6|php7|php8|php[0-9]+|phps|pht|phtm|phtml|phar|inc|ini|cgi|pl|py|sh|shtml|jsp|asp|aspx)(\.|$)">
+    Require all denied
+  </FilesMatch>
+</IfModule>
+<IfModule mod_access_compat.c>
+  <FilesMatch "(?i)\.(php|php3|php4|php5|php6|php7|php8|php[0-9]+|phps|pht|phtm|phtml|phar|inc|ini|cgi|pl|py|sh|shtml|jsp|asp|aspx)(\.|$)">
+    Order allow,deny
+    Deny from all
+  </FilesMatch>
+</IfModule>
+
 # Canonical host: redirect www to apex (301), any domain
 <IfModule mod_rewrite.c>
   RewriteEngine On
+
+  # Repo and tooling files are not public: dotfiles/dirs (.git, .claude, .mcp.json)
+  # except /.well-known/ (certificate validation), markdown docs and LICENSE.
+  RewriteRule (^|/)\.(?!well-known/) - [F]
+  RewriteRule \.md$ - [NC,F]
+  RewriteRule ^LICENSE$ - [F]
   RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
   RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 
